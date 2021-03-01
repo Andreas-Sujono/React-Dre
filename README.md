@@ -15,23 +15,23 @@ Component
 1) ClickOutsidehandler
 
 ## Future Development
-[ ] Modal
-[ ] Tooltip
-[ ] Dropdown
-[ ] Notifications --> Toast, popup
-[ ] Grid
-[ ] table
-[ ] Search bar
-[ ] Input --> Text(All HTML5 input type), Checkbox, radio, Textarea, date, time, dateTime, phoneNumber, country, switch toogle
-[ ] CopyToClipboard
-[ ] LoadingBar
-[ ] Rich text editor (horizontal toolbar, vertical toolbar) --> insert Table, Image, Video
-[ ] Confirmation (onCancel, onConfirm)
-[ ] Pagination
-[ ] Carousel
-[ ] Ellipsis label
-[ ] Progress bar
-[ ] Styles
+* [ ] Modal
+* [ ] Tooltip
+* [ ] Dropdown
+* [ ] Notifications --> Toast, popup
+* [ ] Grid
+* [ ] table
+* [ ] Search bar
+* [ ] Input --> Text(All HTML5 input type), Checkbox, radio, Textarea, date, time, dateTime, phoneNumber, country, switch toogle
+* [ ] CopyToClipboard
+* [ ] LoadingBar
+* [ ] Rich text editor (horizontal toolbar, vertical toolbar) --> insert Table, Image, Video
+* [ ] Confirmation (onCancel, onConfirm)
+* [ ] Pagination
+* [ ] Carousel
+* [ ] Ellipsis label
+* [ ] Progress bar
+* [ ] Styles
     - Basic css styles: Font-size, Color, Icons, 
 
 ## Contributions
