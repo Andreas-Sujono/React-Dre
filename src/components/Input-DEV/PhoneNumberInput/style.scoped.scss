@@ -1,0 +1,40 @@
+.common-phone-number-input{
+    display: block;
+    width: 100%;
+    label{
+        color: #555670;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        margin:0;
+        height: 20px;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 6px;
+
+        .required-icon{
+            color: #ff5a7e;
+        }
+    }
+    .text-input-container{
+        position: relative;
+        display: flex;
+    }
+
+    input{
+        width: 100%;
+        height: 40px;
+        background: #FCFCFF;
+        border: 1px solid #EBEBF2;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        padding:10px 12px;
+        color: #555670;
+        box-shadow: none;
+    }
+    // .disabled-input{
+    //     background-color: #ebebf2;
+    // }
+}

@@ -1,0 +1,74 @@
+{
+  "extends": [
+    "plugin:testcafe/recommended",
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "testcafe",
+    "flowtype",
+    "react"
+  ],
+  "rules": {
+    "no-restricted-globals": 0,
+    "no-await-in-loop": [
+      0
+    ],
+    "no-plusplus": [
+      0,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "implicit-arrow-linebreak": 0,
+    "comma-dangle": 0,
+    "no-param-reassign": 0,
+    "react/destructuring-assignment": [
+      0,
+      "always"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".tsx"
+        ]
+      }
+    ],
+    "import/no-unresolved": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "flowtype/no-types-missing-file-annotation": 0,
+    "react/prop-types": 0,
+    "import/extensions": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "document": false,
+    "shallow": false,
+    "render": false,
+    "mount": false,
+    "toJson": false,
+    "fixture": false
+  }
+}
