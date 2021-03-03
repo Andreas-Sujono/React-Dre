@@ -8,6 +8,8 @@ import url from 'rollup-plugin-url';
 import autoprefixer from 'autoprefixer';
 import typescript from 'rollup-plugin-typescript2';
 import del from 'rollup-plugin-delete';
+import React from 'react';
+import ReactIs from 'react-is';
 import pkg from './package.json';
 
 export default {
@@ -44,7 +46,8 @@ export default {
     }),
     commonjs({
       namedExports: {
-        'react-is': ['isForwardRef', 'isValidElementType'],
+        react: Object.keys(React),
+        'react-is': Object.keys(ReactIs),
         'keyboard-key': ['getKey']
       }
     })

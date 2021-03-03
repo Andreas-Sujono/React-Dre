@@ -1,6 +1,6 @@
 {
   "name": "react-dre",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "dependencies": {
@@ -11,7 +11,8 @@
     "build": "rollup -c",
     "test": "jest --watch --env=jsdom --coverage=false",
     "test:ci": "jest --env=jsdom --coverage --reporters=default --reporters=jest-junit --maxWorkers=2",
-    "test:watch": "jest --env=jsdom --coverage --reporters=default --reporters=jest-junit --watch"
+    "test:watch": "jest --env=jsdom --coverage --reporters=default --reporters=jest-junit --watch",
+    "publish": "npm run build && npm publish"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +63,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
+    "react-is": "^17.0.1",
     "react-loading": "^2.0.3",
     "rollup": "^2.40.0",
     "rollup-plugin-commonjs": "^10.1.0",

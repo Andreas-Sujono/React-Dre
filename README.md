@@ -13,18 +13,21 @@ npm install react-dre<insert-current-version>
 ## Documentation
 Component
 1) ClickOutsidehandler
+2) CopyToClipboard
+3) Grid (including Row, Column)
+4) LoadingBar
 
 ## Future Development
 * [ ] Modal
 * [ ] Tooltip
-* [ ] Dropdown
+* [ ] DropdownMenu
 * [ ] Notifications --> Toast, popup
-* [ ] Grid
+* [x] Grid - **TEST**
 * [ ] table
 * [ ] Search bar
 * [ ] Input --> Text(All HTML5 input type), Checkbox, radio, Textarea, date, time, dateTime, phoneNumber, country, switch toogle
-* [ ] CopyToClipboard
-* [ ] LoadingBar
+* [x] CopyToClipboard
+* [x] LoadingBar - **TEST**
 * [ ] Rich text editor (horizontal toolbar, vertical toolbar) --> insert Table, Image, Video
 * [ ] Confirmation (onCancel, onConfirm)
 * [ ] Pagination
@@ -32,7 +35,7 @@ Component
 * [ ] Ellipsis label
 * [ ] Progress bar
 * [ ] Styles
-    - Basic css styles: Font-size, Color, Icons, 
+    - Basic css styles: Font-size, Color, 
 
 ## Contributions
 We welcome community support with both pull requests and reporting bugs. Please don't hesitate to jump in.

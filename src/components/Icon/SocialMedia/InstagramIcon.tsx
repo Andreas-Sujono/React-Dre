@@ -2,7 +2,7 @@ import React from 'react';
 
 // <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 const ColoredInstagramIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512">
     <linearGradient id="SVGID_1_" gradientTransform="matrix(0 -1.982 -1.844 0 -132.522 -51.077)" gradientUnits="userSpaceOnUse" x1="-37.106" x2="-26.555" y1="-72.705" y2="-84.047">
       <stop offset="0" stopColor="#fd5" />
       <stop offset=".5" stopColor="#ff543e" />
