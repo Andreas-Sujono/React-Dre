@@ -34,6 +34,9 @@ Component
 * [ ] Carousel
 * [ ] Ellipsis label
 * [ ] Progress bar
+* [ ] Scroll animation
+* [ ] Transition animation
+* [ ] Autoscroll & scroller && LinkWithScroller (integrate with react-router-dom)
 * [ ] Styles
     - Basic css styles: Font-size, Color, 
 
