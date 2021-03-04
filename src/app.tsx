@@ -1,6 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import UrlCopyCard from './Test/CopyToClipboard';
+import Container from './Style';
 
-const TestComponent = () => (<div>Andreas Sujono</div>);
+const App = () => (<Container><UrlCopyCard /></Container>);
 
-ReactDOM.render(<TestComponent />, document.getElementById('root'));
+export default App;

@@ -1,3 +1,3 @@
-import ClickOutsidehandler from './ClickOutsidehandler'
+import ClickOutsidehandler from './ClickOutsidehandler';
 
-export default ClickOutsidehandler
+export default ClickOutsidehandler;

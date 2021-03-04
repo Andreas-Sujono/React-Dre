@@ -45,7 +45,7 @@
     ],
     "import/no-unresolved": 0,
     "max-len": [
-      "error",
+      1,
       {
         "code": 120,
         "tabWidth": 2,

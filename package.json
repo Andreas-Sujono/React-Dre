@@ -1,6 +1,6 @@
 {
   "name": "react-dre",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "dependencies": {
@@ -8,6 +8,7 @@
     "styled-media-query": "^2.1.2"
   },
   "scripts": {
+    "start": "react-scripts start",
     "build": "rollup -c",
     "test": "jest --watch --env=jsdom --coverage=false",
     "test:ci": "jest --env=jsdom --coverage --reporters=default --reporters=jest-junit --maxWorkers=2",
@@ -41,7 +42,7 @@
     "@types/react": "17.0.2",
     "autoprefixer": "^10.2.4",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "8.1.0",
     "babel-preset-react-app": "^10.0.0",
     "consolidated-events": "^2.0.2",
     "copy-to-clipboard": "^3.3.1",
@@ -65,9 +66,11 @@
     "react-icons": "^4.2.0",
     "react-is": "^17.0.1",
     "react-loading": "^2.0.3",
+    "react-scripts": "^4.0.3",
     "rollup": "^2.40.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-gzip": "^2.5.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
