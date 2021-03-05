@@ -42,6 +42,7 @@ Component
 * [ ] Carousel
 * [ ] Ellipsis label
 * [ ] Progress bar
+* [ ] Skeleton / Shimmer loading 
 * [ ] Scroll animation
 * [ ] Transition animation
 * [ ] Autoscroll & scroller && LinkWithScroller (integrate with react-router-dom)
