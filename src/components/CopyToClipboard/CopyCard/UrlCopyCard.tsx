@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { SimpleCopyIcon } from 'components/Icon';
 import copy from '..';
 import { CardContainer, InputContainer, IconContainer } from './Style';

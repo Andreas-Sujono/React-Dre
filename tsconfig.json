@@ -14,7 +14,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": [
       "dom",
       "es2016",
@@ -25,7 +25,6 @@
     "strictFunctionTypes": false,
     "downlevelIteration": true,
     "declaration": true,
-    "noUnusedLocals": false,
     "noImplicitAny": false,
     "declarationDir": "dist/types",
     "isolatedModules": true

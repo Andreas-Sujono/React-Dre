@@ -1,7 +1,7 @@
 import React from 'react';
-import UrlCopyCard from './Test/CopyToClipboard';
+import Test from './Test/Modal';
 import Container from './Style';
 
-const App = () => (<Container><UrlCopyCard /></Container>);
+const App = () => (<Container><Test /></Container>);
 
 export default App;
