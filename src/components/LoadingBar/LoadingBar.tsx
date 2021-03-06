@@ -14,34 +14,44 @@ type LoadingType =
   | "spinningBubbles"
   | "spokes";
 
-interface IProps {
-  color: string;
-  type: LoadingType;
-  width: string;
-  height: string;
-  containerStyle?: object;
+interface Styles {
+  containerStyle?: Record<string, any>;
 }
-const LoadingBar: React.FC<IProps> = ({
-  color,
-  type,
+
+interface ILoadingBarProps {
+  width: string;
+  color?: string;
+  type?: LoadingType;
+  styles?: Styles;
+}
+const LoadingBar: React.FC<ILoadingBarProps> = ({
   width,
-  height,
-  containerStyle = {}
+  color = '#4aaffe',
+  type = 'spin',
+  styles = {
+    containerStyle: {}
+  }
 }) => (
-  <LoadingContainer style={containerStyle}>
-    <ReactLoading type={type} color={color} height={height} width={width} />
+  <LoadingContainer style={styles.containerStyle}>
+    <ReactLoading type={type} color={color} width={width} height={width} />
   </LoadingContainer>
 );
 
-const FullPageLoadingBar: React.FC<IProps> = ({
-  color,
-  type,
+interface IFullPageLoadingBarProps extends ILoadingBarProps{
+  backgroundColor: string;
+}
+
+const FullPageLoadingBar: React.FC<IFullPageLoadingBarProps> = ({
   width,
-  height,
-  containerStyle = {}
+  backgroundColor,
+  color = '#4aaffe',
+  type = 'spin',
+  styles = {
+    containerStyle: {}
+  }
 }) => (
-  <LoadingFullPageContainer style={containerStyle}>
-    <ReactLoading type={type} color={color} height={height} width={width} />
+  <LoadingFullPageContainer style={styles.containerStyle} backgroundColor={backgroundColor}>
+    <ReactLoading type={type} color={color} width={width} height={width} />
   </LoadingFullPageContainer>
 );
 

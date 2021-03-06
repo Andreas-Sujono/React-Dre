@@ -1,7 +1,7 @@
 import React from 'react';
-import Test from './Test/Modal';
+import SearchBar from './Test/SearchBar';
 import Container from './Style';
 
-const App = () => (<Container><Test /></Container>);
+const App = () => (<Container><SearchBar /></Container>);
 
 export default App;

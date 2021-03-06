@@ -1,26 +1,26 @@
 import React from 'react';
 import { SimpleCopyIcon } from 'components/Icon';
 import copy from '..';
-import { CardContainer, InputContainer, IconContainer } from './Style';
+import { CardContainer, StyledInput, IconContainer } from './Style';
 
 interface Styles {
-  ContainerStyle: Record<string, any>;
-  inputStyle: Record<string, any>;
-  iconStyle: Record<string, any>;
+  ContainerStyle?: Record<string, any>;
+  inputStyle?: Record<string, any>;
+  iconStyle?: Record<string, any>;
 }
 
-interface IProps {
+interface IUrlCopyCardProps {
   url: string;
   width: string | number;
   onAfterCopy?: () => void;
   backgroundColor?: string;
   copyBackgroundColor?: string;
   styles?: Styles;
-  customIcon?: React.ReactNode;
+  copyIcon?: React.ReactNode;
   iconPosition?: 'left' | 'right' | 'none';
 }
 
-const UrlCopyCard: React.FC<IProps> = ({
+const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
   url,
   width,
   onAfterCopy = () => null,
@@ -31,7 +31,7 @@ const UrlCopyCard: React.FC<IProps> = ({
     inputStyle: {},
     iconStyle: {}
   },
-  customIcon = <SimpleCopyIcon />,
+  copyIcon = <SimpleCopyIcon />,
   iconPosition = 'right',
 }) => {
   const widthString: string = typeof (width) === 'number' ? `${width}px` : width;
@@ -48,14 +48,14 @@ const UrlCopyCard: React.FC<IProps> = ({
       onClick={handleCopy}
       iconPosition={iconPosition}
     >
-      {customIcon}
+      {copyIcon}
     </IconContainer>
   );
 
   return (
     <CardContainer style={styles.ContainerStyle} backgroundColor={backgroundColor} widthString={widthString}>
       {iconPosition === 'left' && renderIcon()}
-      <InputContainer
+      <StyledInput
         value={url}
         backgroundColor={backgroundColor}
         style={styles.inputStyle}

@@ -1,7 +1,9 @@
 import styled, { keyframes, css } from 'styled-components';
 import { IModalProps } from './Modal';
 // TODO: change animation to the react transition group
-export const ModalContainer = styled.div`
+export const ModalContainer = styled.div.attrs({
+  className: 'react-dre-modal-container'
+})`
     position: fixed;
     top: 0;
     left: 0;
@@ -18,7 +20,9 @@ const backgroundFade = keyframes`
     opacity: 1;
     }
 `;
-export const Overlay = styled.div`
+export const Overlay = styled.div.attrs({
+  className: 'modal-overlay'
+})`
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +45,9 @@ const moveToBottom = (injectedTransformBefore = '', injectedTransform = '') => k
     }
 `;
 
-export const ModalContentContainer = styled.div`
+export const ModalContentContainer = styled.div.attrs({
+  className: 'modal-content-container'
+})`
     > *{
         position: absolute;
         top: 50%;

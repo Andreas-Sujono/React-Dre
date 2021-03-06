@@ -25,6 +25,7 @@ import {
   BsChevronUp as UpChevronIcon,
   BsThreeDotsVertical as DotsVerticalIcon,
   BsThreeDots as DotsHorizontalIcon,
+  BsSearch as SearchIcon
 } from 'react-icons/bs';
 import { GoThreeBars as HamburgerIcon, GoLocation as LocationIcon } from 'react-icons/go';
 import {
@@ -75,5 +76,6 @@ export {
   TiltedSendIcon,
   LocationIcon,
   ShowPasswordIcon,
-  HidePasswordIcon
+  HidePasswordIcon,
+  SearchIcon
 };

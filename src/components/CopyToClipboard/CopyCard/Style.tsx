@@ -1,6 +1,9 @@
 import styled from 'styled-components';
+import { colors } from 'components/Styles/assets';
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div.attrs({
+  className: 'react-dre-copy-card'
+})`
     width: ${(props) => props.widthString}; 
     background-color: ${(props) => props.backgroundColor};
     display: flex;
@@ -10,7 +13,9 @@ export const CardContainer = styled.div`
     padding: 0;
 `;
 
-export const InputContainer = styled.input`
+export const StyledInput = styled.input.attrs({
+  className: 'input-container'
+})`
     width: 90%;
     background-color: ${(props) => props.backgroundColor};
     border-radius: ${(props) => (props.iconPosition === 'left' ? '0 8px 8px 0' : '8px 0 0 8px')};
@@ -19,14 +24,16 @@ export const InputContainer = styled.input`
     margin-right: 1px;
     font-size: 14px;
     line-height: 16px;
-    color: #73748F;
+    color: ${colors.secondary};
 
     &:hover{
         cursor: auto;
     }
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.div.attrs({
+  className: 'icon-container'
+})`
     width: 10%;
     background-color: ${(props) => props.backgroundColor};
     border-radius: ${(props) => (props.iconPosition === 'right' ? '0 8px 8px 0' : '8px 0 0 8px')};
@@ -36,5 +43,5 @@ export const IconContainer = styled.div`
     height: 100%;
     padding: 8px 12px;
     cursor: pointer;
-    color: #73748F;
+    color: ${colors.icon};
 `;

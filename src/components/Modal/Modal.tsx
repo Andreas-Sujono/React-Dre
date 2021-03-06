@@ -5,8 +5,8 @@ import {
 } from './Style';
 
 interface Styles {
-  contentContainerStyle: Record<string, any>;
-  overlayStyle: Record<string, any>;
+  contentContainerStyle?: Record<string, any>;
+  overlayStyle?: Record<string, any>;
 }
 
 export interface IModalProps {
