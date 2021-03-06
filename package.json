@@ -1,11 +1,12 @@
 {
   "name": "react-dre",
-  "version": "0.2.3",
+  "version": "0.2.7",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "dependencies": {
-    "styled-components": "^5.2.1",
-    "styled-media-query": "^2.1.2"
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,6 +38,7 @@
   ],
   "devDependencies": {
     "@popperjs/core": "^2.9.0",
+    "@rollup/plugin-babel": "^5.3.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -72,13 +74,15 @@
     "rollup": "^2.40.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-gzip": "^2.5.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-url": "^3.0.1",
+    "styled-components": "^5.2.1",
+    "styled-media-query": "^2.1.2",
     "typescript": "^4.2.2"
   }
 }

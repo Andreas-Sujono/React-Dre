@@ -1,5 +1,5 @@
 # React-Dre
-A fully customized component library that summarizes all the great React libraries while maintaining the flexibility of functionality and styling that makes your frontend development much easier, initiated by An**DRE**as himself.
+A fully customized component library that summarizes all the great React libraries while maintaining the functionality and flexibility of styling that makes your frontend development much easier, initiated by An**DRE**as himself.
 
 We compile other popular component libraries into this `React-Dre` where we add more functionality and flexibility of styling
 
@@ -18,7 +18,7 @@ yarn add react-dre@<insert-current-version>
 ```
 
 ## Documentation
-#### Current Version (Pre-Release): 0.2.3
+#### Current Version (Pre-Release): 0.2.7
 Component
 1) ClickOutsidehandler
 2) CopyToClipboard (copy, UrlCopyCard)
