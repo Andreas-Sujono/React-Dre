@@ -1,5 +1,5 @@
 # React-Dre
-A fully customized component library that makes your frontend development much easier initiated by An**DRE**as.
+A fully customized component library that summarizes all the great React libraries while maintaining the flexibility of functionality and styling that makes your frontend development much easier, initiated by An**DRE**as himself.
 
 We compile other popular component libraries into this `React-Dre` where we add more functionality and flexibility of styling
 
@@ -22,9 +22,8 @@ yarn add react-dre@<insert-current-version>
 Component
 1) ClickOutsidehandler
 2) CopyToClipboard (copy, UrlCopyCard)
-3) Grid (Row, Column)
-4) LoadingBar (LoadingBar, FullPageLoadingBar)
-5) Modal
+3) LoadingBar (LoadingBar, FullPageLoadingBar)
+4) Modal
 
 ## Future Development
 * [x] ~~Modal~~ **VALIDATION-PHASE**
@@ -66,7 +65,7 @@ Component
 
 ## Contributions
 We welcome community support with both pull requests and reporting bugs. Please don't hesitate to jump in.
-- developement phase: features reviewed --> features pulled --> must go through **TESTING-PHASE**  --> then must go through **VALIDATION-PHASE** --> a stable release features. 
+- developement phase: features reviewed --> features pulled --> must go through **TESTING-PHASE**  --> must go through **VALIDATION-PHASE** --> a stable release features. 
 
 **TESTING-PHASE** will be tested by Andreas, while **VALIDATION-PHASE** must wait for at least 2 weeks of usage by all the maintainer of React-Dre
 
