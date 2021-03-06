@@ -18,7 +18,7 @@ yarn add react-dre@<insert-current-version>
 ```
 
 ## Documentation
-#### Current Version (Pre-Release): 0.2.2
+#### Current Version (Pre-Release): 0.2.3
 Component
 1) ClickOutsidehandler
 2) CopyToClipboard (copy, UrlCopyCard)
@@ -75,6 +75,7 @@ We welcome community support with both pull requests and reporting bugs. Please 
 - All the component must be fully customized in terms of functionality and styling
 - use functional component and react hooks
 - Use styled-component to style your component
+- all exported component must be inside a `Named Exports` including the `Default Exports`, and must have 1 `Default Exports`
 - all styled component must attach a className attribute, where only the container must start with `react-dre`
 - all the styles props must be injected into 1 props called `styles`
 
