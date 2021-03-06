@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useCallback } from 'react';
 import { SimpleCopyIcon } from 'components/Icon';
 import copy from '..';
 import { CardContainer, StyledInput, IconContainer } from './Style';
@@ -36,12 +36,12 @@ const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
 }) => {
   const widthString: string = typeof (width) === 'number' ? `${width}px` : width;
 
-  const handleCopy = () => {
+  const handleCopy = useCallback(() => {
     copy(url);
     onAfterCopy();
-  };
+  }, [url, onAfterCopy]);
 
-  const renderIcon = () => (
+  const renderIcon = useCallback(() => (
     <IconContainer
       style={styles.iconStyle}
       backgroundColor={copyBackgroundColor}
@@ -50,7 +50,7 @@ const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
     >
       {copyIcon}
     </IconContainer>
-  );
+  ), [styles.iconStyle, copyBackgroundColor, handleCopy, iconPosition, copyIcon]);
 
   return (
     <CardContainer style={styles.ContainerStyle} backgroundColor={backgroundColor} widthString={widthString}>
@@ -67,4 +67,4 @@ const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
   );
 };
 
-export default UrlCopyCard;
+export default memo(UrlCopyCard);

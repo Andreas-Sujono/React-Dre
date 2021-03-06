@@ -62,6 +62,7 @@ Component
 1) ClickOutsidehandler --> [https://github.com/airbnb/react-outside-click-handler](https://github.com/airbnb/react-outside-click-handler)
 2) CopyToClipboard --> [https://github.com/sudodoki/copy-to-clipboard#readme](https://github.com/sudodoki/copy-to-clipboard#readme)
 3) LoadingBar --> [https://github.com/fakiolinho/react-loading](https://github.com/fakiolinho/react-loading)
+4) Modal --> react-modal
 
 ## Contributions
 We welcome community support with both pull requests and reporting bugs. Please don't hesitate to jump in.
@@ -77,7 +78,7 @@ We welcome community support with both pull requests and reporting bugs. Please 
 - all exported component must be inside a `Named Exports` including the `Default Exports`, and must have 1 `Default Exports`
 - all styled component must attach a className attribute, where only the container must start with `react-dre`
 - all the styles props must be injected into 1 props called `styles`
-
+- always use `memo` or `useCallback` or `useMemo`, inside a component or function or heavy data
 
 #### Naming:
 - for a container or wrapper, the name of styled component must be end with `Container`

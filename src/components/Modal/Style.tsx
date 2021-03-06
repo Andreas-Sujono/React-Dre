@@ -9,6 +9,7 @@ export const ModalContainer = styled.div.attrs({
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 20;
 `;
 
 const backgroundFade = keyframes`
@@ -61,5 +62,5 @@ export const ModalContentContainer = styled.div.attrs({
     )} 0.3s ease-out;
             animation-fill-mode: forwards;
         ` : css`transform: translate(-50%, -50%)`)}
-
+    }
 `;
