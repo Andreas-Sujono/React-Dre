@@ -1,7 +1,7 @@
 import React, { useState, memo, useRef } from 'react';
 import ClickOutsidehandler from 'components/ClickOutsideHandler';
 import { SearchIcon } from 'components/Icon';
-import { SearchContainer, IconContainer, StyledInput } from './Style';
+import { SearchContainer, IconContainer, StyledInput } from './SearchBar.style';
 
 interface Styles {
   containerStyle?: Record<string, any>;

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import ReactDOM from 'react-dom';
 import {
   ModalContainer, Overlay, ModalContentContainer
-} from './Style';
+} from './Modal.style';
 
 interface Styles {
   contentContainerStyle?: Record<string, any>;
@@ -12,6 +12,7 @@ interface Styles {
 export interface IModalProps {
   isOpen: boolean;
   onRequestClose: () => void;
+  children: React.ReactNode;
   styles?: Styles;
   shouldCloseOnOverlayClick?: boolean;
   showTransition?: boolean;
@@ -40,13 +41,15 @@ const Modal: React.FunctionComponent<IModalProps> = ({
   const elementExists = () => document.body.contains(document.getElementById(modalContainerId));
 
   useEffect(() => {
-    if (!elementExists()) document.body.appendChild(modalContainerElement);
+    if (!elementExists()) {
+      document.body.appendChild(modalContainerElement);
+    }
     return () => {
       if (modalContainerElement && elementExists()) {
         document.body.removeChild(modalContainerElement);
       }
     };
-  }, []);
+  }, [isOpen]);
 
   const closeModal = () => {
     onRequestClose();
@@ -62,14 +65,12 @@ const Modal: React.FunctionComponent<IModalProps> = ({
   const renderModal = (_children: React.ReactNode) => (
     <ModalContainer id={modalId}>
       <Overlay
-        className="react-dre-modal-overlay"
         onClick={() => {
           if (shouldCloseOnOverlayClick) closeModal();
         }}
         style={styles.overlayStyle}
       />
       <ModalContentContainer
-        className="react-dre-modal-content-container"
         style={styles.contentContainerStyle}
         contentContainerStyle={styles.contentContainerStyle}
         showTransition={showTransition}
@@ -83,4 +84,4 @@ const Modal: React.FunctionComponent<IModalProps> = ({
   return ReactDOM.createPortal(renderModal(children), modalContainerElement);
 };
 
-export default Modal;
+export default memo(Modal);

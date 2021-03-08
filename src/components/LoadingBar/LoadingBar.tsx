@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactLoading from 'react-loading';
-import { LoadingContainer, LoadingFullPageContainer } from './Style';
+import { LoadingContainer, LoadingFullPageContainer } from './LoadingBar.style';
 
 // Loading type from react-loading library
 type LoadingType =

@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { SimpleCopyIcon } from 'components/Icon';
 import copy from '..';
-import { CardContainer, StyledInput, IconContainer } from './Style';
+import { CardContainer, StyledInput, IconContainer } from './UrlCopyCard.style';
 
 interface Styles {
   ContainerStyle?: Record<string, any>;

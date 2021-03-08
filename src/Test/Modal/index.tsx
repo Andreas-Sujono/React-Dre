@@ -3,7 +3,7 @@ import Modal from 'components/Modal';
 
 export default () => {
   // const [render, setRender] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   // const [isOpen2, setIsOpen2] = useState(true);
 
   const style = {
@@ -18,6 +18,7 @@ export default () => {
 
   return (
     <>
+      <button onClick={() => setIsOpen(true)} type="button">open modal</button>
       <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} shouldCloseOnOverlayClick>
         <div style={style}>
           Test
