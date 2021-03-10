@@ -1,8 +1,10 @@
 {
   "name": "react-dre",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
   "homepage": "https://github.com/Andreas-Sujono/React-Dre",
   "repository": {
     "type": "git",
