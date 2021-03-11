@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "lib",
     "sourceMap": true,
     "baseUrl": "src",
     "target": "es5",
@@ -26,7 +26,7 @@
     "downlevelIteration": true,
     "declaration": true,
     "noImplicitAny": false,
-    "declarationDir": "dist/types",
+    "declarationDir": "lib/types",
     "isolatedModules": true
   },
   "typeRoots": [

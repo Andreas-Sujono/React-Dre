@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
+import get from 'lodash.get';
 // import transition from 'styled-transition-group';
-import { IModalProps } from './Modal';
 
 // TODO: change animation to the react transition group
 export const ModalContainer = styled.div.attrs({
@@ -57,10 +57,10 @@ export const ModalContentContainer = styled.div.attrs({
       left: 50%;
       border-radius: 8px;
       padding: 8px;
-      ${(props: IModalProps) => (props.showTransition ? css`
+      ${(props) => (props.showTransition ? css`
           animation: ${moveToBottom(
-      props.styles?.contentContainerStyle?.transformBefore,
-      props.styles?.contentContainerStyle?.transform
+      get(props, 'styles.contentContainerStyle.transformBefore'),
+      get(props, 'styles.contentContainerStyle.transform'),
     )} 0.15s ease-out;
           animation-fill-mode: forwards;
       ` : css`transform: translate(-50%, -50%)`)}

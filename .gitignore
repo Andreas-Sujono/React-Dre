@@ -9,6 +9,7 @@ node_modules
 
 # builds
 dist
+lib
 styleguide
 .out
 .rpt2_cache

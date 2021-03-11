@@ -1,3 +1,4 @@
+import path from 'path';
 import json from 'rollup-plugin-json';
 import commonjs from 'rollup-plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
@@ -10,9 +11,13 @@ import typescript from 'rollup-plugin-typescript2';
 import del from 'rollup-plugin-delete';
 import { terser } from 'rollup-plugin-terser';
 import babel from '@rollup/plugin-babel';
-import pkg from './package.json';
 
 const indexFile = 'src/index.tsx';
+
+const libRoot = path.join(__dirname, './lib');
+const distRoot = path.join(libRoot, 'dist');
+const cjsRoot = path.join(libRoot, 'cjs');
+const esRoot = path.join(libRoot, 'esm');
 
 const plugins = [
   external(),
@@ -48,61 +53,39 @@ const exported = componentName.map((component) => ({
   output: [
     {
       format: 'cjs',
-      dir: `dist/${component}`,
+      dir: path.join(cjsRoot, component),
+      sourcemap: false
+    },
+    {
+      format: 'es',
+      dir: path.join(esRoot, component),
       sourcemap: false
     },
   ],
   plugins
 }));
 
-// export default {
-//   input: indexFile,
-//   output: [
-//     {
-//       file: pkg.main,
-//       format: 'cjs',
-//     },
-//     {
-//       file: pkg.module,
-//       format: 'es',
-//     },
-//   ],
-//   plugins: [del({ targets: 'dist/*' }), ...plugins]
-// };
-
 export default [{
   input: indexFile,
   output: [
     {
-      file: pkg.main,
+      file: path.join(distRoot, 'index.js'),
       format: 'cjs',
     },
     {
-      file: pkg.module,
+      file: path.join(cjsRoot, 'index.js'),
+      format: 'cjs',
+    },
+    {
+      file: path.join(distRoot, 'index.es.js'),
+      format: 'es',
+    },
+    {
+      file: path.join(esRoot, 'index.es.js'),
       format: 'es',
     },
   ],
-  plugins: [del({ targets: 'dist/*' }), ...plugins]
+  plugins: [del({ targets: libRoot }), ...plugins]
 },
 ...exported
 ];
-
-// export default {
-//   input: indexFile,
-//   output: [
-//     {
-//       format: 'cjs',
-//       dir: 'dist',
-//       sourcemap: false,
-//     },
-//     {
-//       format: 'cjs',
-//       dir: 'dist',
-//       exports: 'auto',
-//       preserveModules: true,
-//       preserveModulesRoot: 'src/components',
-//       sourcemap: false,
-//     },
-//   ],
-//   plugins: [del({ targets: 'dist/*' }), ...plugins]
-// };
