@@ -53,12 +53,12 @@ const exported = componentName.map((component) => ({
   output: [
     {
       format: 'cjs',
-      dir: path.join(cjsRoot, component),
+      file: `${cjsRoot}/${component}.js`,
       sourcemap: false
     },
     {
       format: 'es',
-      dir: path.join(esRoot, component),
+      file: `${esRoot}/${component}.js`,
       sourcemap: false
     },
   ],
