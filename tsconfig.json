@@ -1,4 +1,5 @@
 {
+  "extends": "@4c/tsconfig/web.json",
   "compilerOptions": {
     "outDir": "lib",
     "sourceMap": true,
