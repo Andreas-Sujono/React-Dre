@@ -16,7 +16,9 @@ import {
   AiOutlineCalendar as CalenderIcon,
   AiOutlineSend as HorizontalSendIcon,
   AiOutlineEye as ShowPasswordIcon,
-  AiOutlineEyeInvisible as HidePasswordIcon
+  AiOutlineEyeInvisible as HidePasswordIcon,
+  AiOutlineDesktop as DesktopIcon,
+  AiOutlineMobile as MobileIcon
 } from 'react-icons/ai';
 import {
   BsChevronDown as DownChevronIcon,
@@ -77,5 +79,7 @@ export {
   LocationIcon,
   ShowPasswordIcon,
   HidePasswordIcon,
-  SearchIcon
+  SearchIcon,
+  DesktopIcon,
+  MobileIcon
 };

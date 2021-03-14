@@ -3,6 +3,10 @@ import { addEventListener } from 'consolidated-events';
 import objectValues from 'object.values';
 import contains from 'document.contains';
 
+/**
+ * CLONE: airbnb/react-outside-click-handler
+ * https://github.com/airbnb/react-outside-click-handler
+ */
 const DISPLAY = {
   BLOCK: 'block',
   FLEX: 'flex',

@@ -2,6 +2,10 @@ module.exports = {
   roots: [
     '<rootDir>/src/'
   ],
+  moduleDirectories: [
+    'node_modules',
+    'src'
+  ],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md)$':
       '<rootDir>/src/__mocks__/fileMock.ts',
@@ -10,6 +14,11 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     '**/*.{ts,tsx}', '!**/*.stories.{ts,tsx}', '!index.ts', '!**/*.examples.tsx'
+  ],
+  coveragePathIgnorePatterns: [
+    'node_modules',
+    'examples',
+    'app.tsx'
   ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest'

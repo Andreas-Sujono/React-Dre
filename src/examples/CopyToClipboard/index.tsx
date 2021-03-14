@@ -1,5 +1,5 @@
 import React from 'react';
-import UrlCopyCard from 'components/CopyToClipboard/CopyCard';
+import UrlCopyCard from 'components/CopyToClipboard/UrlCopyCard';
 
 export default () => (
   <UrlCopyCard

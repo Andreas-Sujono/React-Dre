@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import LoadingBar, { FullPageLoadingBar } from '../LoadingBar';
 
-it('Should render loadingbar successfully', async () => {
+it('Should render Loadingbar successfully', async () => {
   render(<LoadingBar width="50px" />);
 });
 
