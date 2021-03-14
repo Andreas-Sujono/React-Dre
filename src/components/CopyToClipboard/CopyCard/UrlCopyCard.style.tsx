@@ -24,7 +24,7 @@ export const StyledInput = styled.input.attrs({
     margin-right: 1px;
     font-size: 14px;
     line-height: 16px;
-    color: ${colors.secondary};
+    color: ${colors.text.primary};
 
     &:hover{
         cursor: auto;
@@ -43,5 +43,5 @@ export const IconContainer = styled.div.attrs({
     height: 100%;
     padding: 8px 12px;
     cursor: pointer;
-    color: ${colors.icon};
+    color: ${colors.text.icon};
 `;

@@ -55,7 +55,7 @@ Component
 * [ ] create storybook documentation
 * [ ] create website documentation
 * [ ] create guidelines page
-* [ ] optimize library by not injecting all components to 1 index.es, use different folders to produce different component dist file
+* [x] ~~optimize library by not injecting all components to 1 index.es, use different folders to produce different component dist file~~
 
     
 ## References

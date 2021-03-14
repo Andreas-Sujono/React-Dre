@@ -22,7 +22,7 @@ export const IconContainer = styled.div.attrs({
   top: 8px;
   ${(props) => (props.iconPosition === 'left' ? css`left: 0;` : css`right: 0;`)}
   cursor: pointer;
-  color: ${colors.icon};
+  color: ${colors.text.icon};
   width: ${(props) => props.iconWidth};
   height: auto;
   display: flex;
