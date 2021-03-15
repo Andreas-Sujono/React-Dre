@@ -91,7 +91,7 @@ We welcome community support with both pull requests and reporting bugs. Please 
 
 **TESTING-PHASE** will be tested by Andreas, while **VALIDATION-PHASE** must wait for at least 2 weeks of usage by all the maintainer of React-Dre
 
-For more info, please visit [CONTRIBUTING.md]('https://github.com/Andreas-Sujono/React-Dre/CONTRIBUTING.md')
+For more info, please visit [CONTRIBUTING.md](https://github.com/Andreas-Sujono/React-Dre/blob/master/CONTRIBUTING.md)
 
 ## Developers and Maintainers
 This library is developed and maintained by:
