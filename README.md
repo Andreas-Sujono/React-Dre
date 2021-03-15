@@ -30,7 +30,8 @@ we recommend you to import the component from the component modules itself, for 
 ## Documentation
 #### Current Version (Pre-Release): 0.2.13
 Full Documentation and how to use each component is IN PROGRESS
-Storybook: [https://andreas-sujono.github.io/React-Dre/](https://andreas-sujono.github.io/React-Dre/)
+
+- Storybook: [https://andreas-sujono.github.io/React-Dre/](https://andreas-sujono.github.io/React-Dre/)
 
 **Component**
 1) ClickOutsidehandler
