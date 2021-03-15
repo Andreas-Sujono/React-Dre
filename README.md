@@ -1,7 +1,7 @@
 # React-Dre
 A fully customized component library that summarizes all the great React libraries while maintaining the functionality and flexibility of styling that makes your frontend development much easier, initiated by An**DRE**as himself.
 
-We compile other popular component libraries into this `React-Dre` where we add more functionality and flexibility of styling
+We compile other popular component libraries into this one library `React-Dre` where we add more functionality and flexibility of styling
 
 ## Installation
 
@@ -17,9 +17,21 @@ or
 yarn add react-dre@<insert-current-version>
 ```
 
+## How to use
+you can import any component directly from `react-dre`, for example: 
+- `import { Modal } from 'react-dre'`
+
+BUT
+
+we recommend you to import the component from the component modules itself, for example:
+- `import { Modal } from 'react-dre/Modal'`
+
+
 ## Documentation
-#### Current Version (Pre-Release): 0.2.7
-Component
+#### Current Version (Pre-Release): 0.2.13
+Full Documentation and how to use each component is IN PROGRESS
+
+**Component**
 1) ClickOutsidehandler
 2) CopyToClipboard (copy, UrlCopyCard)
 3) LoadingBar (LoadingBar, FullPageLoadingBar)
@@ -60,6 +72,8 @@ Component
 
     
 ## References
+
+We aware that there are tons of other component library out there. Therefore, to make this library the best one. We need to research other library functionality before include it inside `React-dre`
 1) ClickOutsidehandler --> [https://github.com/airbnb/react-outside-click-handler](https://github.com/airbnb/react-outside-click-handler)
 2) CopyToClipboard --> [https://github.com/sudodoki/copy-to-clipboard#readme](https://github.com/sudodoki/copy-to-clipboard#readme)
 3) LoadingBar --> [https://github.com/fakiolinho/react-loading](https://github.com/fakiolinho/react-loading)
@@ -67,30 +81,19 @@ Component
 
 ## Contributions
 We welcome community support with both pull requests and reporting bugs. Please don't hesitate to jump in.
-- developement phase: features reviewed --> features pulled --> must go through **TESTING-PHASE**  --> must go through **VALIDATION-PHASE** --> a stable release features. 
+
+#### Development cycle
+1) Features reviewed 
+2) Features must go through the **TESTING-PHASE**, where we test all the component functionality
+3) Features pulled and can be used experimentally
+4) Features must go through the **VALIDATION-PHASE**, where people can use commercially and reports bug if any
+5) Features is included in the next stable release features. 
 
 **TESTING-PHASE** will be tested by Andreas, while **VALIDATION-PHASE** must wait for at least 2 weeks of usage by all the maintainer of React-Dre
 
-### Guidelines
-- Use typescript to develop the component
-- All the component must be fully customized in terms of functionality and styling
-- use functional component and react hooks
-- Use styled-component to style your component
-- all exported component must be inside a `Named Exports` including the `Default Exports`, and must have 1 `Default Exports`
-- all styled component must attach a className attribute, where only the container must start with `react-dre`
-- all the styles props must be injected into 1 props called `styles`
-- always use `memo` or `useCallback` or `useMemo`, inside a component or function or heavy data
+For more info, please visit [CONTRIBUTING.md]('https://github.com/Andreas-Sujono/React-Dre/CONTRIBUTING.md')
 
-#### Naming:
-- for a container or wrapper, the name of styled component must be end with `Container`
-- for a styled native html element that is not a container or a wrapper, the name of styled component must be start with `Styled` 
-- all the props interface name must follow the format of `I` + \<componentName\> + `Props`
-
-#### eslint important:
-- use absolute import for accessing a parent element
-- the order of the import is from the farthest to the nearest component
-
-## Developers
+## Developers and Maintainers
 This library is developed and maintained by:
 - [Andreas Sujono](https://github.com/Andreas-Sujono)
 
