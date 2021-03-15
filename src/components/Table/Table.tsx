@@ -3,8 +3,8 @@ import React from 'react';
 interface ITableProps {
 }
 
-const Table: React.FunctionComponent<ITableProps> = (props) => {
-  const x = '';
+const Table: React.FunctionComponent<ITableProps> = () => {
+  //test
   return (
     <table />
   );

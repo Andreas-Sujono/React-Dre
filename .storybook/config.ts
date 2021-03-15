@@ -1,6 +1,9 @@
-import { configure } from "@storybook/react";
-const req = require.context("../src", true, /\.stories\.tsx$/);
-function loadStories() {
-    req.keys().forEach(req);
-}
-configure(loadStories, module);
+import { addDecorator, configure } from '@storybook/react';
+import { addReadme } from 'storybook-readme';
+import './style.css'
+
+addDecorator(addReadme);
+
+configure([
+  require.context('../src', true, /\.stories\.(js|ts|tsx|mdx)$/)
+], module);

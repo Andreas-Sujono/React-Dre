@@ -15,14 +15,14 @@ interface IDropdownButtonProps {
 
 const DropdownButton: React.FunctionComponent<IDropdownButtonProps> = ({
   button,
-  menuContent,
-  height = 'auto',
-  clickOutsideToClose = true,
+  // menuContent,
+  // height = 'auto',
+  // clickOutsideToClose = true,
   isOpen = false,
   hoverToOpen = false,
   useCommonStyle = true,
-  useDefaultAnimation = true,
-  menuPosition = 'down',
+  // useDefaultAnimation = true,
+  // menuPosition = 'down',
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(isOpen);
 
