@@ -43,7 +43,7 @@ interface IFullPageLoadingBarProps extends ILoadingBarProps{
 
 const FullPageLoadingBar: React.FC<IFullPageLoadingBarProps> = ({
   width,
-  backgroundColor,
+  backgroundColor = 'white',
   color = '#4aaffe',
   type = 'spin',
   styles = {
