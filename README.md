@@ -63,6 +63,7 @@ Full Documentation and how to use each component is IN PROGRESS
 * [ ] Rich text editor (horizontal toolbar, vertical toolbar) --> insert Table, Image, Video
 * [ ] Styles
     - Basic css styles: Font-size, Color, 
+    - CSS styling distribution file
 * [ ] more customize style (use props of **styles** and **classNames** and **defaultClassName** to add the flexibility)
 
 #### Optimization
@@ -70,7 +71,7 @@ Full Documentation and how to use each component is IN PROGRESS
 * [ ] create website documentation
 * [ ] create guidelines page
 * [ ] add unit test for all the components
-* [ ] ~~optimize library by not injecting all components to 1 index.es, use different folders to produce different component dist file~~
+* [x] ~~optimize library by not injecting all components to 1 index.es, use different folders to produce different component dist file~~
 
     
 ## References

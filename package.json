@@ -27,8 +27,8 @@
     "test:ci": "jest --env=jsdom --coverage --reporters=default --reporters=jest-junit --maxWorkers=2",
     "test:watch": "jest --env=jsdom --coverage --reporters=default --reporters=jest-junit --watch",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "deploy:storybook": "gh-pages -d storybook-static"
+    "build-storybook": "build-storybook -s public --docs",
+    "deploy:storybook": "npm run build-storybook && gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
