@@ -9,7 +9,7 @@ export const CardContainer = styled.div.attrs({
     display: flex;
     justify-content: center;
     align-items:center;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     padding: 0;
 `;
 
@@ -18,13 +18,11 @@ export const StyledInput = styled.input.attrs({
 })`
     width: 90%;
     background-color: ${(props) => props.backgroundColor};
-    border-radius: ${(props) => (props.iconPosition === 'left' ? '0 8px 8px 0' : '8px 0 0 8px')};
+    border-radius: ${(props) => (props.iconPosition === 'left' ? '0 0.5rem 0.5rem 0' : '0.5rem 0 0 0.5rem')};
     border: 0;
-    padding: 8px 12px;
+    padding: 0.4rem 0.65rem;
     margin-right: 1px;
-    font-size: 14px;
-    line-height: 16px;
-    color: ${colors.text.primary};
+    font-size: 1rem;
     cursor: text;
 `;
 
@@ -33,12 +31,12 @@ export const IconContainer = styled.div.attrs({
 })`
     width: 10%;
     background-color: ${(props) => props.backgroundColor};
-    border-radius: ${(props) => (props.iconPosition === 'right' ? '0 8px 8px 0' : '8px 0 0 8px')};
+    border-radius: ${(props) => (props.iconPosition === 'right' ? '0 0.5rem 0.5rem 0' : '0.5rem 0 0 0.5rem')};
     display: flex;
     justify-content: center;
     align-items:center;
     height: 100%;
-    padding: 8px 12px;
+    padding: 0.4rem 0.65rem;
     cursor: pointer;
     color: ${colors.text.icon};
 `;

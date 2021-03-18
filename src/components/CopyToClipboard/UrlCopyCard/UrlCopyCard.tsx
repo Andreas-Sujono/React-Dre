@@ -47,6 +47,7 @@ const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
       backgroundColor={copyBackgroundColor}
       onClick={handleCopy}
       iconPosition={iconPosition}
+      title="Click to copy"
     >
       {copyIcon}
     </IconContainer>
