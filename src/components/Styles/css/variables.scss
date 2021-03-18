@@ -1,8 +1,24 @@
+//general color
 $primary: #0d6efd !default;
 $secondary: #6c757d !default;
-$succes: #198754  !default;
+$success: #198754  !default;
 $info: #0dcaf0 !default;
 $warning: #ffc107 !default;
 $danger: #dc3545 !default;
 $light: #f8f9fa  !default;
 $dark: #212529 !default;
+
+//font-color
+$text-primary: #0C0E45 !default;
+$text-secondary: #73748F !default ;
+$text-tertiary: #AEAFC1 !default ;
+$text-link: $primary !default;
+$icon: $text-secondary !default;
+$line: $light !default;
+
+//media size breakdown
+$media-xl: '1200px';
+$media-lg: '992px';
+$media-md: '768px';
+$media-sm: '576px';
+$media-xs: '400px';

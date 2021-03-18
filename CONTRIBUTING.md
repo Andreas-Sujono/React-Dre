@@ -35,7 +35,7 @@ To get started, you can see the list of future improvement in the `README.md` an
 - All styled component must attach a className attribute (at least for container), where only the container must start with `react-dre-.....`
 - All the styles props must be injected into 1 props called `styles`
 - Always use `memo` or `useCallback` or `useMemo`, inside a component or function or heavy data
-
+- for styling that deal with number, do not use `px`, use `rem` or `em`. For example: `font-size: 1rem;`, `border-radius 0.25rem;`, `margin: 0.2rem;`
 
 - **Important**: For the new component created, you must research the other library first and put it inside the `Readme` in the `References` section. You can reference this other library in terms of how to implement, what props are needed, etc
 

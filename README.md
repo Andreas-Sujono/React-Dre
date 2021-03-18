@@ -77,6 +77,14 @@ Full Documentation and how to use each component is IN PROGRESS
 ## References
 
 We aware that there are tons of other component library out there. Therefore, to make this library the best one. We need to research other library functionality before include it inside `React-dre`
+
+Similar component libary:
+1) React-bootstrap
+2) Material-ui
+3) Circuit-UI
+
+
+Component reference:
 1) ClickOutsidehandler --> [https://github.com/airbnb/react-outside-click-handler](https://github.com/airbnb/react-outside-click-handler)
 2) CopyToClipboard --> [https://github.com/sudodoki/copy-to-clipboard#readme](https://github.com/sudodoki/copy-to-clipboard#readme)
 3) LoadingBar --> [https://github.com/fakiolinho/react-loading](https://github.com/fakiolinho/react-loading)
