@@ -4,7 +4,7 @@ $secondary: #6c757d !default;
 $success: #198754  !default;
 $info: #0dcaf0 !default;
 $warning: #ffc107 !default;
-$danger: #dc3545 !default;
+$error: #dc3545 !default;
 $light: #f8f9fa  !default;
 $dark: #212529 !default;
 
@@ -30,7 +30,7 @@ $media-xs: '400px';
     success: $success;
     info: $info;
     warning: $warning;
-    danger: $danger;
+    error: $error;
     light: $light;
     dark: $dark;
 

@@ -1,3 +1,9 @@
+<img
+  alt="Logo of React Dre UI"
+  src="https://andreas-sujono.github.io/React-Dre/assets/logo-with-name.png"
+  style={{ margin: 'auto', display: 'block' }}
+/>
+
 # React-Dre
 A fully customized component library that summarizes all the great React libraries while maintaining the functionality and flexibility of styling that makes your frontend development much easier, initiated by An**DRE**as himself.
 

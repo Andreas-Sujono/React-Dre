@@ -9,7 +9,7 @@
     vertical-align: middle;
     white-space: nowrap;
     font-size: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     transition: color .15s ease-in-out,
         background-color .15s ease-in-out,
         border-color .15s ease-in-out,
@@ -22,6 +22,48 @@
     border-color: $primary;
 }
 
-.dre-btn-hover{
+.dre-btn-secondary{
+    color: #ffffff;
+    background-color: $secondary;
+    border-color: $secondary;
+}
+
+.dre-btn-success{
+    color: #ffffff;
+    background-color: $success;
+    border-color: $success;
+}
+
+.dre-btn-info{
+    color: #ffffff;
+    background-color: $info;
+    border-color: $info;
+}
+
+.dre-btn-warning{
+    color: #ffffff;
+    background-color: $warning;
+    border-color: $warning;
+}
+
+.dre-btn-error{
+    color: #ffffff;
+    background-color: $error;
+    border-color: $error;
+}
+
+.dre-btn-light{
+    color: $text-primary;
+    background-color: $light;
+    border-color: $light;
+}
+
+.dre-btn-dark{
+    color: #ffffff;
+    background-color: $dark;
+    border-color: $dark;
+}
+
+.dre-btn-hover:hover{
     filter: brightness(90%);
 }

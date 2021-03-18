@@ -1,0 +1,30 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+// import { UrlCopyCardExample } from 'examples/CopyToClipboard';
+import { Button } from '..';
+
+<Meta title="Components/Button" component={Button} />
+
+# Button Documentation
+<Preview>
+  <Story name="Button">
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem'}}>
+      <Button name="button" style={{backgroundColor: '#0d6efd', color: 'white'}}/>
+      <Button name="button" style={{backgroundColor: '#6c757d', color: 'white'}}/>
+      <Button name="button" style={{backgroundColor: '#198754', color: 'white'}}/>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="ButtonLoading">
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem'}}>
+      <Button name="button" style={{backgroundColor: '#0d6efd', color: 'white'}} isLoading/>
+      <Button name="button" style={{backgroundColor: '#6c757d', color: 'white'}} isLoading/>
+      <Button name="button" style={{backgroundColor: '#198754', color: 'white'}} isLoading/>
+    </div>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Button} />

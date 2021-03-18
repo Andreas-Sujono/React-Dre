@@ -18,7 +18,7 @@ interface Styles {
   containerStyle?: Record<string, any>;
 }
 
-interface ILoadingBarProps {
+export interface ILoadingBarProps {
   width?: string;
   color?: string;
   type?: LoadingType;
