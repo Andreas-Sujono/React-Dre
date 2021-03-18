@@ -19,13 +19,13 @@ interface Styles {
 }
 
 interface ILoadingBarProps {
-  width: string;
+  width?: string;
   color?: string;
   type?: LoadingType;
   styles?: Styles;
 }
 const LoadingBar: React.FC<ILoadingBarProps> = ({
-  width,
+  width = '40px',
   color = '#4aaffe',
   type = 'spin',
   styles = {
@@ -38,11 +38,11 @@ const LoadingBar: React.FC<ILoadingBarProps> = ({
 );
 
 interface IFullPageLoadingBarProps extends ILoadingBarProps{
-  backgroundColor: string;
+  backgroundColor?: string;
 }
 
 const FullPageLoadingBar: React.FC<IFullPageLoadingBarProps> = ({
-  width,
+  width = '40px',
   backgroundColor = 'white',
   color = '#4aaffe',
   type = 'spin',

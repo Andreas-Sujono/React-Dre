@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from 'components/Styles/assets';
+import { variables } from 'components/Styles/assets';
 
 export const CardContainer = styled.div.attrs({
   className: 'react-dre-copy-card'
@@ -38,5 +38,5 @@ export const IconContainer = styled.div.attrs({
     height: 100%;
     padding: 0.4rem 0.65rem;
     cursor: pointer;
-    color: ${colors.text.icon};
+    color: ${variables.icon};
 `;

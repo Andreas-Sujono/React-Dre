@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components';
-import { colors } from 'components/Styles/assets';
-
-const { input } = colors;
+import { variables } from 'components/Styles/assets';
 
 export const SearchContainer = styled.div.attrs({
   className: 'react-dre-search-bar'
@@ -22,7 +20,7 @@ export const IconContainer = styled.div.attrs({
   top: 8px;
   ${(props) => (props.iconPosition === 'left' ? css`left: 0;` : css`right: 0;`)}
   cursor: pointer;
-  color: ${colors.text.icon};
+  color: ${variables.icon};
   width: ${(props) => props.iconWidth};
   height: auto;
   display: flex;
@@ -36,12 +34,12 @@ export const StyledInput = styled.input.attrs({
   padding: 8px;
   ${(props) => (props.iconPosition === 'left' ? css`padding-left: 32px;` : css`padding-right: 32px;`)};
   border-radius: 8px;
-  border: 1px solid ${input.borderColor};
+  border: 1px solid ${variables.border};
   transition: box-shadow .15s ease-in-out;
 
   &:focus{
     outline: 0;
-    border-color: ${input.focusedBorderColor};
+    border-color: ${variables.link};
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 `;

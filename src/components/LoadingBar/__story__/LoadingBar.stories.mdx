@@ -1,4 +1,5 @@
 import { Meta, Props, Story, Preview, Canvas } from '@storybook/addon-docs/blocks';
+import { LoadingBarExample } from 'examples/LoadingBar';
 import { LoadingBar, FullPageLoadingBar } from '..';
 
 <Meta title="Components/LoadingBar" component={LoadingBar} />
@@ -6,10 +7,14 @@ import { LoadingBar, FullPageLoadingBar } from '..';
 # LoadingBar Documentation
 <Preview>
   <Story name="LoadingBar">
-    <LoadingBar width="50px"/>
+    <LoadingBarExample />
   </Story>
 </Preview>
 
-## Props
+## LoadingBar Props
 
 <Props of={LoadingBar} />
+
+## FullPageLoadingBar Props
+
+<Props of={FullPageLoadingBar} />

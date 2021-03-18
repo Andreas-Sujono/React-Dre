@@ -1,8 +1,12 @@
 import React from 'react';
 import { LoadingBar, FullPageLoadingBar } from 'components/LoadingBar';
 
-const Default = () => <LoadingBar width="40px" />;
+const LoadingBarExample = () => <LoadingBar width="40px" />;
 
-export const FullPage = () => <FullPageLoadingBar width="50px" backgroundColor="lightgrey" />;
+const FullPageLoadingBarExample = () => <FullPageLoadingBar width="50px" backgroundColor="#e9e9e9" />;
 
-export default Default;
+export default LoadingBarExample;
+export {
+  LoadingBarExample,
+  FullPageLoadingBarExample
+};

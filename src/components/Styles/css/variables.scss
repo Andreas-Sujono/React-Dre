@@ -15,6 +15,7 @@ $text-tertiary: #AEAFC1 !default ;
 $text-link: $primary !default;
 $icon: $text-secondary !default;
 $line: $light !default;
+$border: $light !default;
 
 //media size breakdown
 $media-xl: '1200px';
@@ -22,3 +23,28 @@ $media-lg: '992px';
 $media-md: '768px';
 $media-sm: '576px';
 $media-xs: '400px';
+
+:export {
+    primary: $primary;
+    secondary: $secondary;
+    success: $success;
+    info: $info;
+    warning: $warning;
+    danger: $danger;
+    light: $light;
+    dark: $dark;
+
+    textPrimary: $text-primary;
+    textSecondary: $text-secondary;
+    textTertiary: $text-tertiary;
+    textLink: $text-link;
+    icon: $icon;
+    line: $line;
+    border: $border;
+
+    mediaXl: $media-xl;
+    mediaLg: $media-lg;
+    mediaMd: $media-md;
+    mediaSm: $media-sm;
+    mediaXs: $media-xs;
+}
