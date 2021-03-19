@@ -2,18 +2,43 @@
 
 .dre-btn{
     display: inline-block;
-    padding: .375rem .75rem;
+    padding: .5rem 2rem;
     border: 1px solid transparent;
+    outline: 0;
     background: transparent;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
     font-size: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 
+        0px 2px 2px 0px rgb(0 0 0 / 14%), 
+        0px 1px 5px 0px rgb(0 0 0 / 12%);
     transition: color .15s ease-in-out,
         background-color .15s ease-in-out,
         border-color .15s ease-in-out,
         box-shadow .15s ease-in-out;
+
+
+    &:hover{
+        filter: brightness(90%);
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 
+            0px 4px 5px 0px rgb(0 0 0 / 14%), 
+            0px 1px 10px 0px rgb(0 0 0 / 12%);
+    }
+    &:active{
+        filter: brightness(95%);
+    }
+    &:focus{
+        outline: 0;
+        box-shadow: rgb(175, 208, 254) 0px 0px 2px 3px;
+    }
+    &:disabled{
+        filter: brightness(90%);
+    }
 }
 
 .dre-btn-primary{
@@ -21,11 +46,27 @@
     background-color: $primary;
     border-color: $primary;
 }
+.dre-btn-primary-outline{
+    color: $primary;
+    border-color: $primary;
+}
+.dre-btn-primary-text{
+    color: $primary;
+    border-color: transparent;
+}
 
 .dre-btn-secondary{
     color: #ffffff;
     background-color: $secondary;
     border-color: $secondary;
+}
+.dre-btn-secondary-outline{
+    color: $secondary;
+    border-color: $secondary;
+}
+.dre-btn-secondary-text{
+    color: $secondary;
+    border-color: transparent;
 }
 
 .dre-btn-success{
@@ -33,11 +74,27 @@
     background-color: $success;
     border-color: $success;
 }
+.dre-btn-success-outline{
+    color: $success;
+    border-color: $success;
+}
+.dre-btn-secondary-text{
+    color: $secondary;
+    border-color: transparent;
+}
 
 .dre-btn-info{
     color: #ffffff;
     background-color: $info;
     border-color: $info;
+}
+.dre-btn-info-outline{
+    color: $info;
+    border-color: $info;
+}
+.dre-btn-info-text{
+    color: $info;
+    border-color: transparent;
 }
 
 .dre-btn-warning{
@@ -45,11 +102,27 @@
     background-color: $warning;
     border-color: $warning;
 }
+.dre-btn-warning-outline{
+    color: $warning;
+    border-color: $warning;
+}
+.dre-btn-warning-text{
+    color: $warning;
+    border-color: transparent;
+}
 
 .dre-btn-error{
     color: #ffffff;
     background-color: $error;
     border-color: $error;
+}
+.dre-btn-error-outline{
+    color: $error;
+    border-color: $error;
+}
+.dre-btn-error-text{
+    color: $error;
+    border-color: transparent;
 }
 
 .dre-btn-light{
@@ -57,12 +130,29 @@
     background-color: $light;
     border-color: $light;
 }
+.dre-btn-light-outline{
+    color: $text-primary;
+    border-color: $light;
+}
+.dre-btn-light-text{
+    color: $text-primary;
+    border-color: transparent;
+}
 
 .dre-btn-dark{
     color: #ffffff;
     background-color: $dark;
     border-color: $dark;
 }
+.dre-btn-dark-outline{
+    color: $dark;
+    border-color: $dark;
+}
+.dre-btn-dark-text{
+    color: $dark;
+    border-color: transparent;
+}
+
 
 .dre-btn-hover:hover{
     filter: brightness(90%);

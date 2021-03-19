@@ -4,7 +4,7 @@ import get from 'lodash.get';
 
 // TODO: change animation to the react transition group
 export const ModalContainer = styled.div.attrs({
-  className: 'react-dre-modal-container'
+  className: 'dre-modal-container'
 })`
     position: fixed;
     top: 0;

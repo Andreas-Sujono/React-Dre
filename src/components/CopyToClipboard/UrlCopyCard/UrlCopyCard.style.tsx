@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { variables } from 'components/Styles/assets';
 
 export const CardContainer = styled.div.attrs({
-  className: 'react-dre-copy-card'
+  className: 'dre-copy-card'
 })`
     width: ${(props) => props.widthString}; 
     background-color: ${(props) => props.backgroundColor};

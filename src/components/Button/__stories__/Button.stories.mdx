@@ -1,30 +1,142 @@
 import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
-// import { UrlCopyCardExample } from 'examples/CopyToClipboard';
-import { Button } from '..';
+import { Button, ButtonGroup } from '..';
+import { LoadingBar } from '../../LoadingBar'
 
-<Meta title="Components/Button" component={Button} />
+<Meta title="Components/Button" component={Button}/>
 
 # Button Documentation
 <Preview>
   <Story name="Button">
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem'}}>
-      <Button name="button" style={{backgroundColor: '#0d6efd', color: 'white'}}/>
-      <Button name="button" style={{backgroundColor: '#6c757d', color: 'white'}}/>
-      <Button name="button" style={{backgroundColor: '#198754', color: 'white'}}/>
+    <div style={{
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      gap: '1rem', 
+      flexWrap: 'wrap',
+    }}>
+      <Button name="button" variant="primary"/>
+      <Button name="button" variant="secondary"/>
+      <Button name="button" variant="success"/>
+      <Button name="button" variant="info"/>
+      <Button name="button" variant="warning"/>
+      <Button name="button" variant="error"/>
+      <Button name="button" variant="light"/>
+      <Button name="button" variant="dark"/>
     </div>
   </Story>
 </Preview>
 
+### Button outline
+
+<Preview>
+  <Story name="ButtonOutline">
+    <div style={{
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      gap: '1rem', 
+      flexWrap: 'wrap',
+    }}>
+      <Button name="button" variant="primary-outline"/>
+      <Button name="button" variant="secondary-outline"/>
+      <Button name="button" variant="success-outline"/>
+      <Button name="button" variant="info-outline"/>
+      <Button name="button" variant="warning-outline"/>
+      <Button name="button" variant="error-outline"/>
+      <Button name="button" variant="light-outline"/>
+      <Button name="button" variant="dark-outline"/>
+    </div>
+  </Story>
+</Preview>
+
+### Button text
+
+<Preview>
+  <Story name="ButtonText">
+    <div style={{
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      gap: '1rem', 
+      flexWrap: 'wrap',
+    }}>
+      <Button name="button" variant="primary-text"/>
+      <Button name="button" variant="secondary-text"/>
+      <Button name="button" variant="success-text"/>
+      <Button name="button" variant="info-text"/>
+      <Button name="button" variant="warning-text"/>
+      <Button name="button" variant="error-text"/>
+      <Button name="button" variant="light-text"/>
+      <Button name="button" variant="dark-text"/>
+    </div>
+  </Story>
+</Preview>
+
+### Button in loading state
+
 <Preview>
   <Story name="ButtonLoading">
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem'}}>
-      <Button name="button" style={{backgroundColor: '#0d6efd', color: 'white'}} isLoading/>
-      <Button name="button" style={{backgroundColor: '#6c757d', color: 'white'}} isLoading/>
-      <Button name="button" style={{backgroundColor: '#198754', color: 'white'}} isLoading/>
+    <div style={{
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      gap: '1rem', 
+      flexWrap: 'wrap',
+    }}>
+      <Button name="button" variant="primary" isLoading/>
+      <Button name="button" variant="secondary" isLoading/>
+      <Button name="button" variant="success" isLoading/>
+      <Button name="button" variant="info" isLoading/>
+      <Button name="button" variant="warning" isLoading/>
+      <Button name="button" variant="error" isLoading/>
+      <Button name="button" variant="light" isLoading/>
+      <Button name="button" variant="dark" isLoading/>
+    </div>
+  </Story>
+</Preview>
+
+### Button in disabled state
+
+<Preview>
+  <Story name="ButtonDisabled">
+    <div style={{
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      gap: '1rem', 
+      flexWrap: 'wrap',
+    }}>
+      <Button name="button disabled" variant="primary" disabled/>
+      <Button name="button disabled" variant="secondary" disabled/>
+      <Button name="button disabled" variant="success" disabled/>
+      <Button name="button disabled" variant="info" disabled/>
+      <Button name="button disabled" variant="warning" disabled/>
+      <Button name="button disabled" variant="error" disabled/>
+      <Button name="button disabled" variant="light" disabled/>
+      <Button name="button disabled" variant="dark" disabled/>
     </div>
   </Story>
 </Preview>
 
 ## Props
 
-<Props of={Button} />
+<Props of={Button} components={{Button}} />
+
+### Variant Type
+`primary` | `secondary` | `info` | `warning` | `success` | `error` | `light` | `dark` |
+
+
+  `primary-outline` | `secondary-outline` | `info-outline` | `warning-outline` | `success-outline` |
+  `error-outline` | `light-outline` | `dark-outline`
+
+  `primary-text` | `secondary-text` | `info-text` | `warning-text` | `success-text` |
+  `error-text` | `light-text` | `dark-text`
+
+
+
+### ILoadingProps Type
+<Props of={LoadingBar} components={{LoadingBar}}/>
+
+
+## Improvement
+- add ripple effect when clicking on the button

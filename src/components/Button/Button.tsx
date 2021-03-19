@@ -1,16 +1,15 @@
 import React, { ReactElement } from 'react';
-import LoadingBar from 'components/LoadingBar';
+import { Variant } from 'components/Styles/assets';
 import { ILoadingBarProps } from 'components/LoadingBar/LoadingBar';
+import LoadingBar from 'components/LoadingBar';
 import { StyledButton } from './Button.style';
-
-type Variant = 'primary' | 'secondary' | 'info' | 'warning' | 'success' | 'error' | 'light' | 'dark'
 
 interface IButtonProps {
     name: string | React.ReactNode;
     type?: 'button' | 'submit' | 'reset',
     disabled?: boolean;
     isLoading?: boolean;
-    variant?: Variant;
+    variant?: Variant | null;
     icon?: string; // TODO: only from react-dre/Icon type
     style?: Record<string, any>;
     loadingProps?: ILoadingBarProps;
@@ -21,13 +20,16 @@ export default function Button({
   type = 'button',
   disabled = false,
   isLoading = false,
-  variant = 'primary',
+  variant = null,
   style = {},
   loadingProps = {}
 }: IButtonProps): ReactElement {
   const defaultLoadingProps = {
     width: '1.2rem',
-    color: 'white',
+    color: (
+      variant
+      && (variant.startsWith('light') || variant.endsWith('outline') || variant.endsWith('text')))
+      ? '#4aaffe' : 'white',
     ...loadingProps
   };
 
@@ -38,6 +40,7 @@ export default function Button({
       variant={variant}
       type={type}
       isLoading={isLoading}
+      className="dre-btn"
     >
       {isLoading && <span className="dre-loading-container"><LoadingBar {...defaultLoadingProps} /></span>}
       <span className="dre-button-name">{name}</span>

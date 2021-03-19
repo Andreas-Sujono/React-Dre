@@ -1,0 +1,28 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import { ButtonGroup, Button } from '..';
+
+<Meta title="Components/Button/ButtonGroup" component={ButtonGroup} />
+
+# ButtonGroup Documentation
+<Preview>
+  <Story name="ButtonGroup">
+    <ButtonGroup>
+      <Button name="button" variant="primary"/>
+      <Button name="button" variant="secondary"/>
+    </ButtonGroup>
+    <hr style={{borderColor: 'lightgrey', margin: '2em 0'}}/>
+    <ButtonGroup align="center">
+      <Button name="button" variant="primary"/>
+      <Button name="button" variant="secondary"/>
+    </ButtonGroup>
+    <hr style={{borderColor: 'lightgrey', margin: '2em 0'}}/>
+    <ButtonGroup align="right">
+      <Button name="button" variant="primary"/>
+      <Button name="button" variant="secondary"/>
+    </ButtonGroup>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={ButtonGroup} components={{ButtonGroup}} />

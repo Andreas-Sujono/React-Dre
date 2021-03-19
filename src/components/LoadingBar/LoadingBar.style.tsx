@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LoadingContainer = styled.div.attrs(
-  { className: 'react-dre-loading-bar' }
+  { className: 'dre-loading-bar' }
 )`
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@ export const LoadingContainer = styled.div.attrs(
 `;
 
 export const LoadingFullPageContainer = styled(LoadingContainer).attrs(
-  { className: 'react-dre-loading-full-page' }
+  { className: 'dre-loading-full-page' }
 )`
     position: fixed;
     top:0;

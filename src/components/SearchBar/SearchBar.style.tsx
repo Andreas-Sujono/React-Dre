@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { variables } from 'components/Styles/assets';
 
 export const SearchContainer = styled.div.attrs({
-  className: 'react-dre-search-bar'
+  className: 'dre-search-bar'
 })`
   width: ${(props) => (props.isInputExpanded ? props.widthString : props.iconWidth)};
   transition: width 0.4s;

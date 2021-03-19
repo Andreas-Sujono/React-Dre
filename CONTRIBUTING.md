@@ -32,7 +32,7 @@ To get started, you can see the list of future improvement in the `README.md` an
 - Use styled-component to style your component
 - Please follow the current convention of folder of each component. Each component must be inside its own folder and must have at least 3 files (`index.ts`, `Component.tsx`, `Component.style.tsx`)
 - Inside the `index.ts` for any component folder, every exported component or function must be inside a `named export` including the export default component
-- All styled component must attach a className attribute (at least for container), where only the container must start with `react-dre-.....`
+- All styled component must attach a className attribute (at least for container), where only the container must start with `dre-.....`
 - All the styles props must be injected into 1 props called `styles`
 - Always use `memo` or `useCallback` or `useMemo`, inside a component or function or heavy data
 - for styling that deal with number, do not use `px`, use `rem` or `em`. For example: `font-size: 1rem;`, `border-radius 0.25rem;`, `margin: 0.2rem;`

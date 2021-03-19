@@ -1,4 +1,47 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Variant, variables } from 'components/Styles/assets';
+
+export const getVariantStyles = (variant: Variant) => {
+  if (!variant) return css``;
+  const variantVar = variant.split('-')[0];
+  if (variant === 'light') {
+    return css`
+        color:  ${variables.textPrimary};
+        border-color:  ${variables[variantVar]};
+    `;
+  }
+  if (variant === 'light-outline') {
+    return css`
+        color:  ${variables.textPrimary};
+        border-color:  ${variables[variantVar]};
+    `;
+  }
+  if (variant === 'light-text') {
+    return css`
+        color:  ${variables.textPrimary};
+        border-color:  transparent;
+    `;
+  }
+
+  if (variant.endsWith('outline')) {
+    return css`
+        color:  ${variables[variantVar]};
+        border-color:  ${variables[variantVar]};
+    `;
+  }
+  if (variant.endsWith('text')) {
+    return css`
+        color:  ${variables[variantVar]};
+        border-color:  transparent;
+        box-shadow: none;
+    `;
+  }
+  return css`
+        color: #ffffff;
+        background-color: ${variables[variantVar]};
+        border-color: ${variables[variantVar]};
+    `;
+};
 
 export const StyledButton = styled.button`
     display: flex;
@@ -19,6 +62,11 @@ export const StyledButton = styled.button`
         box-shadow .15s ease-in-out;
     cursor: pointer;
     position: relative;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 
+        0px 1px 3px 0px rgb(0 0 0 / 12%);
+    text-transform: capitalize;
+    ${(props) => props.variant && getVariantStyles(props.variant)};
 
     .dre-button-name{
         visibility: ${(props) => (props.isLoading ? 'hidden' : 'visible')};
@@ -32,6 +80,9 @@ export const StyledButton = styled.button`
 
     &:hover{
         filter: brightness(90%);
+        box-shadow: 0px 2px 3px -1px rgb(0 0 0 / 20%), 
+            0px 3px 4px 0px rgb(0 0 0 / 14%), 
+            0px 1px 7px 0px rgb(0 0 0 / 12%);
     }
     &:active{
         filter: brightness(95%);
@@ -41,10 +92,22 @@ export const StyledButton = styled.button`
         box-shadow: rgb(175, 208, 254) 0px 0px 2px 3px;
     }
     &:disabled{
-        filter: brightness(90%);
+        filter: brightness(86%);
+        ${(props) => (props.variant && props.variant.startsWith('light')) && css`color: ${variables.textSecondary}`}
     }
 `;
 
 export const ButtonGroupContainer = styled.div`
+    display: flex;
+    justify-content: ${(props) => {
+    let result = 'flex-start';
+    if (props.align === 'center') result = 'center';
+    else if (props.align === 'right') result = 'flex-end';
+    return result;
+  }};
+    align-items: center;
 
+    &>button:not(:first-child){
+        margin-left: ${(props) => props.gap}
+    }
 `;
