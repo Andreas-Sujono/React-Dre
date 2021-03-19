@@ -46,7 +46,8 @@ const plugins = [
   terser()
 ];
 
-const componentName = ['ClickOutsideHandler', 'Icon', 'CopyToClipboard', 'Modal', 'LoadingBar', 'SearchBar', 'Grid'];
+const componentName = ['ClickOutsideHandler', 'Icon', 'CopyToClipboard', 'Modal', 'LoadingBar', 'SearchBar', 'Grid',
+  'Button'];
 
 const exported = componentName.map((component) => ({
   input: `src/components/${component}/index.ts`,

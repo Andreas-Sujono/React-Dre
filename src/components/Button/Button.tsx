@@ -6,6 +6,7 @@ import { StyledButton } from './Button.style';
 
 interface IButtonProps {
     name: string | React.ReactNode;
+    onClick: () => void;
     type?: 'button' | 'submit' | 'reset',
     disabled?: boolean;
     isLoading?: boolean;
@@ -17,6 +18,7 @@ interface IButtonProps {
 
 export default function Button({
   name,
+  onClick,
   type = 'button',
   disabled = false,
   isLoading = false,
@@ -40,6 +42,7 @@ export default function Button({
       variant={variant}
       type={type}
       isLoading={isLoading}
+      onClick={onClick}
       className="dre-btn"
     >
       {isLoading && <span className="dre-loading-container"><LoadingBar {...defaultLoadingProps} /></span>}

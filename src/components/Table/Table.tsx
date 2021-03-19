@@ -4,9 +4,11 @@ interface ITableProps {
 }
 
 const Table: React.FunctionComponent<ITableProps> = () => {
-  //test
+  const x = 'test';
   return (
-    <table />
+    <table>
+      {x}
+    </table>
   );
 };
 

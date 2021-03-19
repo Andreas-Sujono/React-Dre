@@ -33,7 +33,7 @@ const DropdownButton: React.FunctionComponent<IDropdownButtonProps> = ({
   };
 
   return (
-    <DropdownContainer>
+    <DropdownContainer isMenuOpen={isMenuOpen}>
       <ButtonContainer useCommonStyle={useCommonStyle} onHover={handleButtonHover}>
         {button}
       </ButtonContainer>

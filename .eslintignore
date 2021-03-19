@@ -2,3 +2,4 @@
 /src/privacy-ui/node_modules
 /dist
 /flow-typed
+/**/*.d.ts
