@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/HowToUse" />
+
+<center>
+<h1>How to Use</h1>
+</center>
+<br/>
+
+## General
+you can see the list of component that listed in below documentation and
+you can import those component directly from `react-dre`, for example: 
+- `import { Modal, Button, Icon } from 'react-dre'`
+
+**BUT**
+
+we recommend you to import the component from the component modules itself to reduce the bundle size, 
+the component modules name is the same with the component name.
+for example:
+- `import { Modal } from 'react-dre/Modal'`
+- `import Modal from 'react-dre/Modal'`
+- `import { Button } from 'react-dre/Button'`
+
+## Styling
+You can add the custom styling in 2 ways:
+
+1) First, by passing a styling props. all the component must have the props of `styles` or just `style` for a single component like `Button`, 
+see the props table of each component to see more details. For example, in `Modal`, you can pass 
+```javascript
+styles = {{
+    contentcontainerStyle: {marginTop: '1em'}
+    overlayStyle: {width: '80%'},
+}}
+```
+
+2) second, you can use `styled-component` library. Our component parent will always a **unique classname** starts with `dre-...`,
+so, you can use this as references. for the className of the child components, you must debug yourself using the `inspect element`
+ 
+For example:
+```javascript
+import styled from 'styled-component'
+
+export const ModalContainer = styled.div`
+    //....
+    .dre-modal{
+        //pass styling here
+
+        .overlay{
+            //....
+        }
+
+        .content-container{
+            //......
+        }
+    }
+`
+```
+
+
+## Notes
+- you  will see a `VALIDATION-PHASE` tag which means that the component can be used experimentally, but we are not guarantee if there's any bug or error exists

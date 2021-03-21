@@ -6,6 +6,7 @@ const SORT_ORDER = {
   Introduction: [
     'Welcome',
     'Contributing',
+    'HowToUse'
   ],
   Components: [],
 };
