@@ -35,14 +35,13 @@ you can import any component directly from `react-dre`, for example:
 we recommend you to import the component from the component modules itself to reduce the bundle size, for example:
 - `import { Modal } from 'react-dre/Modal'`
 
-### To know what component is available and how to use it, visit our official storybook documentation here [https://andreas-sujono.github.io/React-Dre/](https://andreas-sujono.github.io/React-Dre/)
+#### To know what component is available and how to use it, visit our official storybook documentation here [https://andreas-sujono.github.io/React-Dre/](https://andreas-sujono.github.io/React-Dre/)
 
 
 ## Documentation
 #### Current Version (Pre-Release): 0.2.14
-Full Documentation and how to use each component is (IN PROGRESS)
 
-- Storybook: [https://andreas-sujono.github.io/React-Dre/](https://andreas-sujono.github.io/React-Dre/)
+Storybook Documentation: [https://andreas-sujono.github.io/React-Dre/](https://andreas-sujono.github.io/React-Dre/)
 
 **Component**
 1) ClickOutsidehandler
