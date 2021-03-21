@@ -18,8 +18,9 @@ export const getVariantStyles = (variant: Variant) => {
   }
   if (variant === 'light-text') {
     return css`
-        color:  ${variables.textPrimary};
+        color:  ${variables.textSecondary};
         border-color:  transparent;
+        box-shadow: none;
     `;
   }
 
@@ -27,6 +28,7 @@ export const getVariantStyles = (variant: Variant) => {
     return css`
         color:  ${variables[variantVar]};
         border-color:  ${variables[variantVar]};
+        box-shadow: none;
     `;
   }
   if (variant.endsWith('text')) {
@@ -92,7 +94,7 @@ export const StyledButton = styled.button`
         box-shadow: rgb(175, 208, 254) 0px 0px 2px 3px;
     }
     &:disabled{
-        filter: brightness(86%);
+        filter: brightness(90%);
         ${(props) => (props.variant && props.variant.startsWith('light')) && css`color: ${variables.textSecondary}`}
     }
 `;
