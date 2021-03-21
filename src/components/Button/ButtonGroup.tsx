@@ -5,17 +5,17 @@ interface IButtonGroupProps {
   children: React.ReactNode;
   align?: 'left' | 'center' | 'right';
   gap?: string;
-  styles?: Record<string, any>;
+  style?: Record<string, any>;
 }
 
 export default function ButtonGroup({
   children,
   align = 'left',
   gap = '1em',
-  styles = {},
+  style = {},
 }: IButtonGroupProps): ReactElement {
   return (
-    <ButtonGroupContainer align={align} gap={gap} styles={styles}>
+    <ButtonGroupContainer align={align} gap={gap} style={style}>
       {children}
     </ButtonGroupContainer>
   );

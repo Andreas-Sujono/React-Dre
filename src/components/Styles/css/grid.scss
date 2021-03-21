@@ -1,0 +1,21 @@
+.dre-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dre-flex-wrap{
+    flex-wrap: wrap;
+}
+
+.dre-flex-column{
+    flex-direction: column;
+}
+
+.dr-gap-l{
+    margin-left: 1em;
+}
+.dr-gap-r{
+    margin-right: 1em;
+}

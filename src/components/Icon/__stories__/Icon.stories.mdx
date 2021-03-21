@@ -1,4 +1,5 @@
 import { Meta, Props, Story, Preview, Canvas } from '@storybook/addon-docs/blocks';
+import IconCard from './IconCard';
 import { Icon } from '..';
 
 <Meta title="Components/Icon" component={Icon} />
@@ -6,7 +7,15 @@ import { Icon } from '..';
 # Icon Documentation
 <Preview>
   <Story name="Icon">
-    <Icon name="ColoredTwitterIcon"/>
+    <div style={{
+      display: 'flex',
+      gap: '1em'
+    }}>
+      <IconCard name="CopyIcon"/>
+      <IconCard name="SimpleCopyIcon"/>
+      <IconCard name="SettingIcon"/>      
+      <IconCard name="ColoredTwitterIcon"/>
+    </div>
   </Story>
 </Preview>
 
