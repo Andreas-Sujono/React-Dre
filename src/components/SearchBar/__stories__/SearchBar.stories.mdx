@@ -1,0 +1,40 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import SearchBar from '..';
+
+<Meta title="Components/SearchBar" component={SearchBar}/>
+
+# SearchBar Documentation
+<Preview>
+  <Story name="SearchBar">
+    <SearchBar 
+      value="" 
+      onChange={() => null} width="400px" 
+      placeholder="Search by name" 
+      styles={{
+        inputStyle: {
+          background: '#fAFAFA'
+        }
+      }}
+      onSearch={() => console.log('search')}
+    />
+    <br/>
+    <br/>
+    <SearchBar 
+      value="" 
+      onChange={() => null} width="400px" 
+      placeholder="Search by name" 
+      isExpand={false} 
+      clickOutsideToCollapse
+      styles={{
+        inputStyle: {
+          background: '#fAFAFA'
+        }
+      }}
+    />
+  </Story>
+</Preview>
+
+
+## Props
+
+<Props of={SearchBar} />

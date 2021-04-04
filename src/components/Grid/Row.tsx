@@ -1,11 +1,19 @@
 import React from 'react';
 import { RowWrapper } from './Style';
 
+export type Size = number | string
+
+export interface Breakpoints {
+  xs: Size;
+  sm: Size;
+  md: Size;
+  lg: Size;
+  xl: Size;
+}
+
 export interface IProps {
   children: React.ReactChildren,
-  gapLg?: number,
-  gapSm?: number,
-  gapMd?: number,
+  gutter: number | Breakpoints | number[] | Breakpoints[];
   style?: Record<string, any>,
   center?: boolean,
   wrap?: boolean,
@@ -14,9 +22,7 @@ export interface IProps {
 
 const Row: React.FC<IProps> = ({
   children,
-  gapLg = 0,
-  gapSm = gapLg,
-  gapMd = gapLg,
+  gutter,
   style = {},
   center = false,
   spaceBetween = false,
@@ -24,9 +30,7 @@ const Row: React.FC<IProps> = ({
 }) => {
   const props = {
     style,
-    gapLg,
-    gapSm,
-    gapMd,
+    gutter,
     center,
     spaceBetween,
     wrapped: wrap,

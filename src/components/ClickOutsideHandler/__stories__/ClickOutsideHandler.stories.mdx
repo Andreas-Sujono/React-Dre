@@ -1,0 +1,19 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import ClickOutsidehandler from '../ClickOutsidehandler.tsx';
+import Button from '../../Button'
+
+<Meta title="Components/ClickOutsideHandler" component={ClickOutsidehandler}/>
+
+# ClickOutsidehandler Documentation
+<Preview>
+  <Story name="ClickOutsideHandler">
+    <ClickOutsideHandler onOutsideClick={() => console.log('click outside')}>
+        <Button name="Click outside" variant="primary" />
+    </ClickOutsideHandler>
+  </Story>
+</Preview>
+
+
+## Props
+
+<Props of={ClickOutsideHandler} />

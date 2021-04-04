@@ -29,6 +29,10 @@ export const getVariantStyles = (variant: Variant) => {
         color:  ${variables[variantVar]};
         border-color:  ${variables[variantVar]};
         box-shadow: none;
+
+        &:hover{
+            box-shadow: none;
+        }
     `;
   }
   if (variant.endsWith('text')) {
@@ -73,6 +77,11 @@ export const StyledButton = styled.button`
     .dre-button-name{
         visibility: ${(props) => (props.isLoading ? 'hidden' : 'visible')};
     }
+    .dre-button-icon{
+        width: 18px;
+        height: 18px;
+        margin-right: 0.5em;
+    }
     .dre-loading-container{
         position: absolute;
         top: 50%;
@@ -82,9 +91,10 @@ export const StyledButton = styled.button`
 
     &:hover{
         filter: brightness(90%);
-        box-shadow: 0px 2px 3px -1px rgb(0 0 0 / 20%), 
-            0px 3px 4px 0px rgb(0 0 0 / 14%), 
-            0px 1px 7px 0px rgb(0 0 0 / 12%);
+        box-shadow: ${(props) => (props.variant.endsWith('text') ? 'none' : `0px 2px 3px -1px rgb(0 0 0 / 20%), 
+        0px 3px 4px 0px rgb(0 0 0 / 14%), 
+        0px 1px 7px 0px rgb(0 0 0 / 12%)`)};
+         
     }
     &:active{
         filter: brightness(95%);

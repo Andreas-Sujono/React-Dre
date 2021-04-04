@@ -75,6 +75,12 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = ({
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   const renderIcon = () => (
     <IconContainer
       style={styles.iconStyle}
@@ -100,6 +106,7 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = ({
           disabled={disabled}
           style={!disabled ? styles.inputStyle : { ...styles.inputStyle, ...styles.inputDisabledStyle }}
           ref={inputRef}
+          onKeyDown={handleKeyDown}
           {...props}
         />
         {showIcon && iconPosition === 'right' && renderIcon() }

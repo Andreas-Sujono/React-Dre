@@ -2,7 +2,14 @@ import React, { ReactElement } from 'react';
 import { Variant } from 'components/Styles/assets';
 import { ILoadingBarProps } from 'components/LoadingBar/LoadingBar';
 import LoadingBar from 'components/LoadingBar';
+import { Icon } from 'components/Icon';
 import { StyledButton } from './Button.style';
+
+interface Styles {
+  buttonStyle?: Record<string, any>;
+  textStyle?: Record<string, any>;
+  iconStyle?: Record<string, any>;
+}
 
 interface IButtonProps {
     name: string | React.ReactNode;
@@ -10,9 +17,9 @@ interface IButtonProps {
     type?: 'button' | 'submit' | 'reset',
     disabled?: boolean;
     isLoading?: boolean;
-    variant?: Variant | null;
-    icon?: string; // TODO: only from react-dre/Icon type
-    style?: Record<string, any>;
+    variant?: Variant | "";
+    icon?: string | null | React.ReactNode; // @desc: only from react-dre/Icon type
+    styles?: Styles;
     loadingProps?: ILoadingBarProps;
 }
 
@@ -22,8 +29,13 @@ export default function Button({
   type = 'button',
   disabled = false,
   isLoading = false,
-  variant = null,
-  style = {},
+  variant = '',
+  icon = null,
+  styles = {
+    buttonStyle: {},
+    textStyle: {},
+    iconStyle: {},
+  },
   loadingProps = {}
 }: IButtonProps): ReactElement {
   const defaultLoadingProps = {
@@ -37,7 +49,7 @@ export default function Button({
 
   return (
     <StyledButton
-      style={style}
+      style={styles.buttonStyle}
       disabled={disabled}
       variant={variant}
       type={type}
@@ -46,7 +58,12 @@ export default function Button({
       className="dre-btn"
     >
       {isLoading && <span className="dre-loading-container"><LoadingBar {...defaultLoadingProps} /></span>}
-      <span className="dre-button-name">{name}</span>
+      {!!icon && (
+      <span className="dre-button-icon" style={styles.iconStyle}>
+        {typeof (icon) === 'string' ? <Icon name={icon} /> : icon}
+      </span>
+      )}
+      <span className="dre-button-name" style={styles.textStyle}>{name}</span>
     </StyledButton>
   );
 }

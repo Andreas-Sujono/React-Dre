@@ -7,7 +7,23 @@ import { LoadingBar, FullPageLoadingBar } from '..';
 # LoadingBar Documentation
 <Preview>
   <Story name="LoadingBar">
-    <LoadingBarExample />
+    <LoadingBar width="40px" type="balls" />
+      <br/>
+    <LoadingBar width="40px" type="bars" />
+      <br/>
+    <LoadingBar width="40px" type="bubbles" />
+      <br/>
+    <LoadingBar width="40px" type="cubes" />
+      <br/>
+    <LoadingBar width="40px" type="cylon" />
+      <br/>
+    <LoadingBar width="40px" type="spin" />
+      <br/>
+    <LoadingBar width="40px" type="spinningBubbles" />
+      <br/>
+    <LoadingBar width="40px" type="spokes" />
+      <br/>
+    <LoadingBar width="40px" type="blank"/>
   </Story>
 </Preview>
 
@@ -18,3 +34,9 @@ import { LoadingBar, FullPageLoadingBar } from '..';
 ## FullPageLoadingBar Props
 
 <Props of={FullPageLoadingBar} />
+
+### LoadingType
+`blank` | `balls` | `bars` | `bubbles` | `cubes` | `cylon` | `spin` | `spinningBubbles` | `spokes`
+
+### Reference
+- build onto [React-Loading](https://github.com/fakiolinho/react-loading)

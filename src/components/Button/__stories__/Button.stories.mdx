@@ -14,14 +14,15 @@ import { LoadingBar } from '../../LoadingBar'
       gap: '1rem', 
       flexWrap: 'wrap',
     }}>
-      <Button name="button" variant="primary"/>
-      <Button name="button" variant="secondary"/>
-      <Button name="button" variant="success"/>
-      <Button name="button" variant="info"/>
-      <Button name="button" variant="warning"/>
-      <Button name="button" variant="error"/>
-      <Button name="button" variant="light"/>
-      <Button name="button" variant="dark"/>
+      <Button name="button original" />
+      <Button name="primary" variant="primary"/>
+      <Button name="secondary" variant="secondary"/>
+      <Button name="success" variant="success"/>
+      <Button name="info" variant="info"/>
+      <Button name="warning" variant="warning"/>
+      <Button name="error" variant="error"/>
+      <Button name="light" variant="light"/>
+      <Button name="dark" variant="dark"/>
     </div>
   </Story>
 </Preview>
@@ -37,17 +38,21 @@ import { LoadingBar } from '../../LoadingBar'
       gap: '1rem', 
       flexWrap: 'wrap',
     }}>
-      <Button name="button outline" variant="primary-outline"/>
-      <Button name="button outline" variant="secondary-outline"/>
-      <Button name="button outline" variant="success-outline"/>
-      <Button name="button outline" variant="info-outline"/>
-      <Button name="button outline" variant="warning-outline"/>
-      <Button name="button outline" variant="error-outline"/>
-      <Button name="button outline" variant="light-outline"/>
-      <Button name="button outline" variant="dark-outline"/>
+      <Button name="primary-outline" variant="primary-outline"/>
+      <Button name="secondary-outline" variant="secondary-outline"/>
+      <Button name="success-outline" variant="success-outline"/>
+      <Button name="info-outline" variant="info-outline"/>
+      <Button name="primary-outline" variant="warning-outline"/>
+      <Button name="error-outline" variant="error-outline"/>
+      <Button name="light-outline" variant="light-outline"/>
+      <Button name="dark-outline" variant="dark-outline"/>
     </div>
   </Story>
 </Preview>
+
+<!-- ```javascript
+  <Button name="primary-outline" variant="primary-outline"/>
+``` -->
 
 ### Button text
 
@@ -60,14 +65,14 @@ import { LoadingBar } from '../../LoadingBar'
       gap: '1rem', 
       flexWrap: 'wrap',
     }}>
-      <Button name="button text" variant="primary-text"/>
-      <Button name="button text" variant="secondary-text"/>
-      <Button name="button text" variant="success-text"/>
-      <Button name="button text" variant="info-text"/>
-      <Button name="button text" variant="warning-text"/>
-      <Button name="button text" variant="error-text"/>
-      <Button name="button text" variant="light-text"/>
-      <Button name="button text" variant="dark-text"/>
+      <Button name="primary-text" variant="primary-text"/>
+      <Button name="secondary-text" variant="secondary-text"/>
+      <Button name="success-text" variant="success-text"/>
+      <Button name="info-text" variant="info-text"/>
+      <Button name="warning-text" variant="warning-text"/>
+      <Button name="error-text" variant="error-text"/>
+      <Button name="light-text" variant="light-text"/>
+      <Button name="dark-text" variant="dark-text"/>
     </div>
   </Story>
 </Preview>
@@ -83,14 +88,30 @@ import { LoadingBar } from '../../LoadingBar'
       gap: '1rem', 
       flexWrap: 'wrap',
     }}>
-      <Button name="button" variant="primary" isLoading/>
-      <Button name="button" variant="secondary" isLoading/>
-      <Button name="button" variant="success" isLoading/>
-      <Button name="button" variant="info" isLoading/>
-      <Button name="button" variant="warning" isLoading/>
-      <Button name="button" variant="error" isLoading/>
-      <Button name="button" variant="light" isLoading/>
-      <Button name="button" variant="dark" isLoading/>
+      <Button name="primary" variant="primary" isLoading/>
+      <Button name="secondary" variant="secondary" isLoading/>
+      <Button name="success" variant="success" isLoading/>
+      <Button name="info" variant="info" isLoading/>
+      <Button name="warning" variant="warning" isLoading/>
+      <Button name="error" variant="error" isLoading/>
+      <Button name="light" variant="light" isLoading/>
+      <Button name="dark" variant="dark" isLoading/>
+    </div>
+  </Story>
+</Preview>
+
+### Button with icon
+
+<Preview>
+  <Story name="ButtonIcon">
+    <div style={{
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center', 
+      gap: '1rem', 
+      flexWrap: 'wrap',
+    }}>
+      <Button name="Share on Twitter" variant="dark" icon="ColoredTwitterIcon"/>
     </div>
   </Story>
 </Preview>
@@ -106,14 +127,14 @@ import { LoadingBar } from '../../LoadingBar'
       gap: '1rem', 
       flexWrap: 'wrap',
     }}>
-      <Button name="button disabled" variant="primary" disabled/>
-      <Button name="button disabled" variant="secondary" disabled/>
-      <Button name="button disabled" variant="success" disabled/>
-      <Button name="button disabled" variant="info" disabled/>
-      <Button name="button disabled" variant="warning" disabled/>
-      <Button name="button disabled" variant="error" disabled/>
-      <Button name="button disabled" variant="light" disabled/>
-      <Button name="button disabled" variant="dark" disabled/>
+      <Button name="primary disabled" variant="primary" disabled/>
+      <Button name="secondary disabled" variant="secondary" disabled/>
+      <Button name="success disabled" variant="success" disabled/>
+      <Button name="info disabled" variant="info" disabled/>
+      <Button name="warning disabled" variant="warning" disabled/>
+      <Button name="error disabled" variant="error" disabled/>
+      <Button name="light disabled" variant="light" disabled/>
+      <Button name="dark disabled" variant="dark" disabled/>
     </div>
   </Story>
 </Preview>

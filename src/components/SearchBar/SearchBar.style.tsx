@@ -5,7 +5,7 @@ export const SearchContainer = styled.div.attrs({
   className: 'dre-search-bar'
 })`
   width: ${(props) => (props.isInputExpanded ? props.widthString : props.iconWidth)};
-  transition: width 0.4s;
+  transition: width 0.25s;
   display: flex;
   justify-content: center;
   align-items:center;
@@ -39,7 +39,7 @@ export const StyledInput = styled.input.attrs({
 
   &:focus{
     outline: 0;
-    border-color: ${variables.link};
+    border-color: ${variables.textLink};
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
   }
 `;

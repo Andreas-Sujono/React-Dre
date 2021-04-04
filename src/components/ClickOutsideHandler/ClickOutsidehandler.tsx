@@ -30,7 +30,7 @@ class ClickOutsideHandler extends React.PureComponent<IProps> {
       // `useCapture` is set to true by default so that a `stopPropagation` in the
       // children will not prevent all outside click handlers from firing - maja
       useCapture: true,
-      display: DISPLAY.BLOCK,
+      display: DISPLAY.INLINE_BLOCK,
     }
 
     childNode: any;
@@ -126,15 +126,12 @@ class ClickOutsideHandler extends React.PureComponent<IProps> {
 
     render() {
       const { children, display } = this.props;
-
+      const style: any = { width: 'auto' };
+      if (display !== DISPLAY.BLOCK && objectValues(DISPLAY).includes(display)) style.display = display;
       return (
         <div
           ref={this.setChildNodeRef}
-          style={
-            display !== DISPLAY.BLOCK && objectValues(DISPLAY).includes(display)
-              ? { display }
-              : undefined
-          }
+          style={style}
         >
           {children}
         </div>

@@ -1,34 +1,27 @@
 import React from 'react';
+import { Breakpoints } from './Row';
 import { ColumnWrapper } from './Style';
 
 export interface IProps {
-  lg: number,
-  height: string,
+  span: number | Breakpoints;
   children: React.ReactChildren,
-  sm?: number,
-  md?: number,
-  xl?: number,
+  flex?: string;
   style?: Record<string, any>,
-  minWidth?: string | number,
 }
 
 const Column: React.FC<IProps> = ({
-  lg,
-  height,
+  span,
+  flex = 'auto',
   children,
-  sm = lg,
-  md = lg,
-  xl = lg,
   style = {},
-  minWidth = '100%'
 }) => {
   const props = {
-    style, sm, md, lg, xl, height, minWidth
+    span, flex, style
   };
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <ColumnWrapper {...props}>
-      <div className="grid-gap">{children}</div>
+      <div className="dre-grid-gap">{children}</div>
     </ColumnWrapper>
   );
 };
