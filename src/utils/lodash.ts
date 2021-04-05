@@ -1,5 +1,5 @@
 import {
-  get, cloneDeep, camelCase, snakeCase, capitalize
+  get, cloneDeep, camelCase, snakeCase, capitalize, startCase, upperFirst
 } from 'lodash';
 
 export {
@@ -7,5 +7,7 @@ export {
   cloneDeep,
   camelCase,
   snakeCase,
-  capitalize
+  capitalize,
+  startCase,
+  upperFirst
 };

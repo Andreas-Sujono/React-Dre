@@ -1,87 +1,77 @@
-import React, { useEffect, useState, memo } from 'react';
-import ReactDOM from 'react-dom';
+import React, { memo } from 'react';
+import ReactModal, { Props as ReactModalProps } from 'react-modal';
 import {
-  ModalContainer, Overlay, ModalContentContainer
+  GlobalStyle
 } from './Modal.style';
 
-interface Styles {
-  contentContainerStyle?: Record<string, any>;
+export interface Styles {
   overlayStyle?: Record<string, any>;
+  contentStyle?: Record<string, any>;
 }
 
 export interface IModalProps {
   isOpen: boolean;
-  onRequestClose: () => void;
+  handleClose: () => void;
   children: React.ReactNode;
   styles?: Styles;
   shouldCloseOnOverlayClick?: boolean;
-  showTransition?: boolean;
+  reactModalProps?: Partial<ReactModalProps>;
 }
+
+const TRANSITION_DURATION = 200;
+const DEFAULT_APP_ELEMENT = '#root';
+export const FLOATING_TRANSITION = `${TRANSITION_DURATION}ms ease-in-out`;
+export const FIXED_TRANSITION = `${TRANSITION_DURATION}ms cubic-bezier(0, 0.37, 0.64, 1)`;
 
 const Modal: React.FunctionComponent<IModalProps> = ({
   isOpen,
-  onRequestClose,
+  handleClose,
   children,
   styles = {
-    contentContainerStyle: {},
-    overlayStyle: {}
+    overlayStyle: {
+      background: 'rgba(12, 15, 20, 0.21)',
+      zIndex: 5,
+    },
+    contentStyle: {}
   },
   shouldCloseOnOverlayClick = false,
-  showTransition = true
+  reactModalProps = {}
 }) => {
-  const modalContainerId = 'react-dre-modal-container';
-  const modalId = 'react-dre-modal';
+  ReactModal.setAppElement(DEFAULT_APP_ELEMENT);
 
-  const [modalContainerElement] = useState(() => {
-    const modalDiv = document.createElement('div');
-    modalDiv.setAttribute('id', modalContainerId);
-    return modalDiv;
-  });
-
-  const elementExists = () => document.body.contains(document.getElementById(modalContainerId));
-
-  useEffect(() => {
-    if (!elementExists()) {
-      document.body.appendChild(modalContainerElement);
-    }
-    return () => {
-      if (modalContainerElement && elementExists()) {
-        document.body.removeChild(modalContainerElement);
-      }
-    };
-  }, [isOpen]);
-
-  const closeModal = () => {
-    onRequestClose();
-    if (modalContainerElement && elementExists()) {
-      document.body.removeChild(modalContainerElement);
-    }
+  const contentStyle = {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    transform: 'translate(-50%, -50%)',
+    ...styles.contentStyle
   };
 
-  const parsedContentContainerStyle = { ...styles.contentContainerStyle };
-  delete parsedContentContainerStyle.transform;
-  delete parsedContentContainerStyle.transformBefore;
+  const finalReactModalProps = {
+    isOpen,
+    shouldCloseOnOverlayClick,
+    htmlOpenClassName: 'ReactModal__Html--open',
+    contentLabel: 'Modal',
+    onRequestClose: handleClose,
+    closeTimeoutMS: TRANSITION_DURATION,
+    style: {
+      content: contentStyle,
+      overlay: styles.overlayStyle
+    },
+    ...reactModalProps,
+  };
 
-  const renderModal = (_children: React.ReactNode) => (
-    <ModalContainer id={modalId}>
-      <Overlay
-        onClick={() => {
-          if (shouldCloseOnOverlayClick) closeModal();
-        }}
-        style={styles.overlayStyle}
-      />
-      <ModalContentContainer
-        style={styles.contentContainerStyle}
-        contentContainerStyle={styles.contentContainerStyle}
-        showTransition={showTransition}
-      >
-        {_children}
-      </ModalContentContainer>
-    </ModalContainer>
+  return (
+    <ReactModal {...finalReactModalProps}>
+      { (typeof (children) === 'function')
+        ? children({
+          onClose: handleClose,
+        })
+        : children}
+      {isOpen && <GlobalStyle />}
+    </ReactModal>
   );
-
-  if (!isOpen) return null;
-  return ReactDOM.createPortal(renderModal(children), modalContainerElement);
 };
 
 export default memo(Modal);

@@ -12,7 +12,7 @@ interface Styles {
 }
 
 interface IButtonProps {
-    name: string | React.ReactNode;
+    name?: string;
     onClick: () => void;
     type?: 'button' | 'submit' | 'reset',
     disabled?: boolean;
@@ -21,10 +21,11 @@ interface IButtonProps {
     icon?: string | null | React.ReactNode; // @desc: only from react-dre/Icon type
     styles?: Styles;
     loadingProps?: ILoadingBarProps;
+    children: React.ReactNode;
 }
 
 export default function Button({
-  name,
+  name = '',
   onClick,
   type = 'button',
   disabled = false,
@@ -36,7 +37,8 @@ export default function Button({
     textStyle: {},
     iconStyle: {},
   },
-  loadingProps = {}
+  loadingProps = {},
+  children,
 }: IButtonProps): ReactElement {
   const defaultLoadingProps = {
     width: '1.2rem',
@@ -63,7 +65,7 @@ export default function Button({
         {typeof (icon) === 'string' ? <Icon name={icon} /> : icon}
       </span>
       )}
-      <span className="dre-button-name" style={styles.textStyle}>{name}</span>
+      <span className="dre-button-name" style={styles.textStyle}>{children || name}</span>
     </StyledButton>
   );
 }
