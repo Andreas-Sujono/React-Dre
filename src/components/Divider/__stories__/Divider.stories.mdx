@@ -1,0 +1,24 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Divider } from '../index.ts';
+
+<Meta title="Components/Divider" component={Divider} />
+
+# Divider Documentation
+<Preview>
+  <Story name="Divider">
+    <Divider />
+    <br/>
+    <Divider thick="3px" />
+  </Story>
+</Preview>
+
+### Divider with text
+<Preview>
+  <Story name="DividerWithText">
+    <Divider text="Homepage"/>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Divider} />
