@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
-import get from 'lodash.get';
+import { get } from 'utils/lodash';
 // import transition from 'styled-transition-group';
 
 // TODO: change animation to the react transition group

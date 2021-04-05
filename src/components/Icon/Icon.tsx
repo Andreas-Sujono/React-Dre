@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { capitalize } from 'utils/transformer';
+import { capitalize } from 'utils/lodash';
 import * as IconName from './IconLibrary';
 
 interface IIconProps {
