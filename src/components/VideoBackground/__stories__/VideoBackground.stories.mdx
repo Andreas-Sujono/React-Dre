@@ -1,0 +1,24 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import VideoBackground from '../index.ts';
+
+<Meta title="Components/VideoBackground" component={VideoBackground} />
+
+# VideoBackground Documentation
+<Preview>
+  <Story name="VideoBackground">
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '50vh',
+      width: '100%',
+      background: 'lightgrey'
+    }}>
+      <VideoBackground src="/assets/night.mp4" />
+    </div>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={VideoBackground} />

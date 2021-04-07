@@ -1,0 +1,27 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+
+<Meta title="Hooks/useDoubleClick"  />
+
+# useDoubleClick Documentation
+<Preview>
+  <Story name="useDoubleClick">
+    
+  </Story>
+</Preview>
+
+## Parameter
+```js
+interface IProps {
+    ref: any;
+    latency?: number;
+    onSingleClick?: (e: any) => void;
+    onDoubleClick?: (e: any) => void;
+}
+
+const useDoubleClick = ({
+  ref,
+  latency = 300,
+  onSingleClick = () => null,
+  onDoubleClick = () => null,
+}: IProps) => {...}
+```
