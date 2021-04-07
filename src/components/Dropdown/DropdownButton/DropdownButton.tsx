@@ -20,21 +20,21 @@ const DropdownButton: React.FunctionComponent<IDropdownButtonProps> = ({
   // clickOutsideToClose = true,
   isOpen = false,
   hoverToOpen = false,
-  useCommonStyle = true,
+  // useCommonStyle = true,
   // useDefaultAnimation = true,
   // menuPosition = 'down',
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(isOpen);
 
   const handleButtonHover = () => {
-    if (hoverToOpen) {
+    if (hoverToOpen && !isMenuOpen) {
       setIsMenuOpen(true);
     }
   };
 
   return (
-    <DropdownContainer isMenuOpen={isMenuOpen}>
-      <ButtonContainer useCommonStyle={useCommonStyle} onHover={handleButtonHover}>
+    <DropdownContainer className="dre-dropdown-container">
+      <ButtonContainer onMouseOver={handleButtonHover}>
         {button}
       </ButtonContainer>
       <div>test</div>

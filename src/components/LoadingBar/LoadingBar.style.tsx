@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
-export const LoadingContainer = styled.div.attrs(
-  { className: 'dre-loading-bar' }
-)`
+export const LoadingContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
 `;
 
-export const LoadingFullPageContainer = styled(LoadingContainer).attrs(
-  { className: 'dre-loading-full-page' }
-)`
+interface ILoadingFullPageContainerProps{
+  backgroundColor: string;
+}
+export const LoadingFullPageContainer = styled(LoadingContainer) < ILoadingFullPageContainerProps > `
     position: fixed;
     top:0;
     left:0;

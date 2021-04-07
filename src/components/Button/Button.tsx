@@ -9,6 +9,7 @@ interface Styles {
   buttonStyle?: Record<string, any>;
   textStyle?: Record<string, any>;
   iconStyle?: Record<string, any>;
+  hoverStyle?: Record<string, any>;
 }
 
 interface IButtonProps {
@@ -21,7 +22,7 @@ interface IButtonProps {
     icon?: string | null | React.ReactNode; // @desc: only from react-dre/Icon type
     styles?: Styles;
     loadingProps?: ILoadingBarProps;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 export default function Button({
@@ -36,6 +37,7 @@ export default function Button({
     buttonStyle: {},
     textStyle: {},
     iconStyle: {},
+    hoverStyle: {}
   },
   loadingProps = {},
   children,
@@ -49,9 +51,17 @@ export default function Button({
     ...loadingProps
   };
 
+  let iconStyle: any = {};
+  if (!children && !name) iconStyle.marginRight = 0;
+  iconStyle = {
+    ...iconStyle,
+    ...styles.iconStyle
+  };
+
   return (
     <StyledButton
       style={styles.buttonStyle}
+      hoverStyle={styles.hoverStyle}
       disabled={disabled}
       variant={variant}
       type={type}
@@ -61,11 +71,11 @@ export default function Button({
     >
       {isLoading && <span className="dre-loading-container"><LoadingBar {...defaultLoadingProps} /></span>}
       {!!icon && (
-      <span className="dre-button-icon" style={styles.iconStyle}>
+      <span className="dre-btn-icon" style={iconStyle}>
         {typeof (icon) === 'string' ? <Icon name={icon} /> : icon}
       </span>
       )}
-      <span className="dre-button-name" style={styles.textStyle}>{children || name}</span>
+      <span className="dre-btn-name" style={styles.textStyle}>{children || name}</span>
     </StyledButton>
   );
 }

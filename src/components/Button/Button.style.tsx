@@ -49,7 +49,12 @@ export const getVariantStyles = (variant: Variant) => {
     `;
 };
 
-export const StyledButton = styled.button`
+interface IStyledButton{
+    variant: Variant | "";
+    isLoading: boolean;
+    hoverStyle?: Record<string, any>;
+}
+export const StyledButton = styled.button < IStyledButton > `
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,10 +79,10 @@ export const StyledButton = styled.button`
     text-transform: capitalize;
     ${(props) => props.variant && getVariantStyles(props.variant)};
 
-    .dre-button-name{
+    .dre-btn-name{
         visibility: ${(props) => (props.isLoading ? 'hidden' : 'visible')};
     }
-    .dre-button-icon{
+    .dre-btn-icon{
         width: 18px;
         height: 18px;
         margin-right: 0.5em;
@@ -94,7 +99,7 @@ export const StyledButton = styled.button`
         box-shadow: ${(props) => (props.variant.endsWith('text') ? 'none' : `0px 2px 3px -1px rgb(0 0 0 / 20%), 
         0px 3px 4px 0px rgb(0 0 0 / 14%), 
         0px 1px 7px 0px rgb(0 0 0 / 12%)`)};
-         
+        ${(props) => props?.hoverStyle};
     }
     &:active{
         filter: brightness(95%);
@@ -105,11 +110,16 @@ export const StyledButton = styled.button`
     }
     &:disabled{
         filter: brightness(90%);
-        ${(props) => (props.variant && props.variant.startsWith('light')) && css`color: ${variables.textSecondary}`}
+        ${(props) => (props.variant && props.variant.startsWith('light'))
+        && css`color: ${variables.textSecondary}`}
     }
 `;
 
-export const ButtonGroupContainer = styled.div`
+interface IButtonGroupContainer {
+    align?: string;
+    gap?: string;
+}
+export const ButtonGroupContainer = styled.div < IButtonGroupContainer > `
     display: flex;
     justify-content: ${(props) => {
     let result = 'flex-start';

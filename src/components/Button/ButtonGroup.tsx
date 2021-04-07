@@ -15,7 +15,7 @@ export default function ButtonGroup({
   style = {},
 }: IButtonGroupProps): ReactElement {
   return (
-    <ButtonGroupContainer align={align} gap={gap} style={style}>
+    <ButtonGroupContainer align={align} gap={gap} style={style} className="dre-btn-group">
       {children}
     </ButtonGroupContainer>
   );

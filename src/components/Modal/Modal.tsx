@@ -32,7 +32,8 @@ const Modal: React.FunctionComponent<IModalProps> = ({
       background: 'rgba(12, 15, 20, 0.21)',
       zIndex: 5,
     },
-    contentStyle: {}
+    contentStyle: {
+    }
   },
   shouldCloseOnOverlayClick = false,
   reactModalProps = {}

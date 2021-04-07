@@ -12,14 +12,14 @@ interface Styles {
 
 interface ISearchBarProps {
   // input props
-  value: string | number | null;
-  onChange: (value: string | number | null, e: any) => void;
+  value: string;
+  onChange: (value: string, e: any) => void;
   placeholder?: string;
   disabled?: boolean;
 
   // others
   width: string;
-  onSearch?: (searchvalue?: string | number | null) => void;
+  onSearch?: (searchvalue?: string) => void;
   showIcon?: boolean;
   iconWidth?: string;
   searchIcon?: React.ReactNode;
@@ -53,7 +53,7 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = ({
   },
 }) => {
   const [isInputExpanded, setIsInputExpanded] = useState(isExpand);
-  const inputRef = useRef<HTMLInputElement>();
+  const inputRef = useRef<HTMLInputElement>(null);
   const props = {
     iconWidth, iconPosition, widthString: width, isInputExpanded
   };
@@ -85,6 +85,7 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = ({
     <IconContainer
       style={styles.iconStyle}
       onClick={handleSearch}
+      className="dre-icon-container"
       {...props}
     >
       {searchIcon}
@@ -95,6 +96,7 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = ({
     <ClickOutsidehandler onOutsideClick={handleClickOutside}>
       <SearchContainer
         style={styles.containerStyle}
+        className="dre-search-bar"
         {...props}
       >
         {showIcon && iconPosition === 'left' && renderIcon() }
@@ -107,6 +109,7 @@ const SearchBar: React.FunctionComponent<ISearchBarProps> = ({
           style={!disabled ? styles.inputStyle : { ...styles.inputStyle, ...styles.inputDisabledStyle }}
           ref={inputRef}
           onKeyDown={handleKeyDown}
+          className="dre-search-input"
           {...props}
         />
         {showIcon && iconPosition === 'right' && renderIcon() }

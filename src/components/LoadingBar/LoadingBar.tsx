@@ -32,7 +32,7 @@ const LoadingBar: React.FC<ILoadingBarProps> = ({
     containerStyle: {}
   }
 }) => (
-  <LoadingContainer style={styles.containerStyle}>
+  <LoadingContainer style={styles.containerStyle} className="dre-loading-bar">
     <ReactLoading type={type} color={color} width={width} height={width} />
   </LoadingContainer>
 );
@@ -50,7 +50,11 @@ const FullPageLoadingBar: React.FC<IFullPageLoadingBarProps> = ({
     containerStyle: {}
   }
 }) => (
-  <LoadingFullPageContainer style={styles.containerStyle} backgroundColor={backgroundColor}>
+  <LoadingFullPageContainer
+    style={styles.containerStyle}
+    backgroundColor={backgroundColor}
+    className="dre-loading-full-page"
+  >
     <ReactLoading type={type} color={color} width={width} height={width} />
   </LoadingFullPageContainer>
 );

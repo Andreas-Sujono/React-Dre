@@ -25,17 +25,19 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .ReactModal__Content{
-      transition: transform ${FIXED_TRANSITION};
+      transition: all ${FIXED_TRANSITION};
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      position: relative;
     }
 
     .ReactModal__Content--before-close{
       opacity: 0;
-      transform: translateY(100%);
     }
 
     .ReactModal__Content--after-open{
       opacity: 1;
-      transform: translateY(100%);
+      transform: translate(-50%, -50%);
     }
   }
 

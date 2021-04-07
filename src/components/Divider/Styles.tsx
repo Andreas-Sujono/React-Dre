@@ -5,13 +5,22 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Line = styled.div`
+interface ILineProps {
+    color: string;
+    width: string;
+    thick: string;
+    textLeft?: string;
+}
+export const Line = styled.div < ILineProps > `
     width: ${(props) => props.textLeft || props.width};
     height: ${(props) => props.thick};
     background: ${(props) => props.color};
 `;
 
-export const StyledText = styled.div`
+interface IStyledText {
+    textGap: string;
+}
+export const StyledText = styled.div < IStyledText > `
     font-size: 1em;
     padding: 0 ${(props) => props.textGap};
 `;

@@ -81,6 +81,7 @@
     "@types/react-transition-group": "^4.4.1",
     "@types/storybook__addon-info": "^5.2.3",
     "@types/storybook__react": "^5.2.1",
+    "@types/styled-components": "5.1.9",
     "autoprefixer": "^10.2.4",
     "awesome-typescript-loader": "^5.2.1",
     "babel-eslint": "^10.1.0",

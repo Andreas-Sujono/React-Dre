@@ -1,6 +1,6 @@
 import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
 import { Modal } from '../index.ts';
-import ModalExample from 'examples/Modal'
+import ModalExample, {ModalWithCloseButton} from 'examples/Modal'
 
 <Meta title="Components/Modal" component={Modal} />
 
@@ -8,6 +8,13 @@ import ModalExample from 'examples/Modal'
 <Preview>
   <Story name="Modal">
     <ModalExample />
+  </Story>
+</Preview>
+
+## Modal with close button Documentation
+<Preview>
+  <Story name="Modal with close button">
+    <ModalWithCloseButton />
   </Story>
 </Preview>
 

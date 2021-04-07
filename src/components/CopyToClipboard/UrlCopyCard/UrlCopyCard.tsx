@@ -48,13 +48,19 @@ const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
       onClick={handleCopy}
       iconPosition={iconPosition}
       title="Click to copy"
+      className="dre-icon-container"
     >
       {copyIcon}
     </IconContainer>
   ), [styles.iconStyle, copyBackgroundColor, handleCopy, iconPosition, copyIcon]);
 
   return (
-    <CardContainer style={styles.ContainerStyle} backgroundColor={backgroundColor} widthString={widthString}>
+    <CardContainer
+      style={styles.ContainerStyle}
+      backgroundColor={backgroundColor}
+      widthString={widthString}
+      className="dre-copy-card"
+    >
       {iconPosition === 'left' && renderIcon()}
       <StyledInput
         value={url}
@@ -62,6 +68,7 @@ const UrlCopyCard: React.FC<IUrlCopyCardProps> = ({
         style={styles.inputStyle}
         iconPosition={iconPosition}
         disabled
+        className="dre-url-input"
       />
       {iconPosition === 'right' && renderIcon()}
     </CardContainer>

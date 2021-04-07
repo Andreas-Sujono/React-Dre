@@ -29,7 +29,7 @@ export const RowWrapper = styled.div < IRowProps > `
     if (props?.spaceBetween) value = 'center';
     return value;
   }};
-  flex-wrap: ${(props: {wrapped?: boolean}) => (props?.wrapped ? 'wrap' : 'nowrap')};
+  flex-wrap: ${(props: any) => (props?.wrapped ? 'wrap' : 'nowrap')};
 `;
 
 // const maxGrid = 12;

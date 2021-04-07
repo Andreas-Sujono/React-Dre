@@ -1,9 +1,12 @@
 import styled, { css } from 'styled-components';
 import { variables } from 'components/Styles/assets';
 
-export const SearchContainer = styled.div.attrs({
-  className: 'dre-search-bar'
-})`
+interface ISearchContainerProps {
+  isInputExpanded: boolean;
+  widthString: string;
+  iconWidth: string;
+}
+export const SearchContainer = styled.div < ISearchContainerProps > `
   width: ${(props) => (props.isInputExpanded ? props.widthString : props.iconWidth)};
   transition: width 0.25s;
   display: flex;
@@ -13,9 +16,10 @@ export const SearchContainer = styled.div.attrs({
   position: relative;
 `;
 
-export const IconContainer = styled.div.attrs({
-  className: 'icon-container'
-})`
+type IIconContainerProps = ISearchContainerProps & {
+  iconPosition: string;
+}
+export const IconContainer = styled.div < IIconContainerProps > `
   position: absolute;
   top: 8px;
   ${(props) => (props.iconPosition === 'left' ? css`left: 0;` : css`right: 0;`)}
@@ -27,9 +31,7 @@ export const IconContainer = styled.div.attrs({
   justify-content: center;
 `;
 
-export const StyledInput = styled.input.attrs({
-  className: 'search-input'
-})`
+export const StyledInput = styled.input < IIconContainerProps > `
   width: 100%;
   padding: 8px;
   ${(props) => (props.iconPosition === 'left' ? css`padding-left: 32px;` : css`padding-right: 32px;`)};

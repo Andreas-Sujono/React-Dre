@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const DropdownContainer = styled.div.attrs(
-  { className: 'dre-dropdown-button' }
-)`
+export const DropdownContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { variables } from 'components/Styles/assets';
 
-export const CardContainer = styled.div.attrs({
-  className: 'dre-copy-card'
-})`
+interface ICardContainer {
+  backgroundColor: string;
+  widthString: string;
+}
+export const CardContainer = styled.div < ICardContainer > `
     width: ${(props) => props.widthString}; 
     background-color: ${(props) => props.backgroundColor};
     display: flex;
@@ -13,12 +15,14 @@ export const CardContainer = styled.div.attrs({
     padding: 0;
 `;
 
-export const StyledInput = styled.input.attrs({
-  className: 'input-container'
-})`
+interface IStyledInput {
+  backgroundColor: string;
+  iconPosition: 'left' | 'right' | 'none';
+}
+export const StyledInput = styled.input < IStyledInput > `
     width: 90%;
-    background-color: ${(props) => props.backgroundColor};
-    border-radius: ${(props) => (props.iconPosition === 'left' ? '0 0.5rem 0.5rem 0' : '0.5rem 0 0 0.5rem')};
+    background-color: ${(props: any) => props.backgroundColor};
+    border-radius: ${(props: any) => (props.iconPosition === 'left' ? '0 0.5rem 0.5rem 0' : '0.5rem 0 0 0.5rem')};
     border: 0;
     padding: 0.4rem 0.65rem;
     margin-right: 1px;
@@ -26,12 +30,10 @@ export const StyledInput = styled.input.attrs({
     cursor: text;
 `;
 
-export const IconContainer = styled.div.attrs({
-  className: 'icon-container'
-})`
+export const IconContainer = styled.div < IStyledInput > `
     width: 10%;
-    background-color: ${(props) => props.backgroundColor};
-    border-radius: ${(props) => (props.iconPosition === 'right' ? '0 0.5rem 0.5rem 0' : '0.5rem 0 0 0.5rem')};
+    background-color: ${(props: any) => props.backgroundColor};
+    border-radius: ${(props: any) => (props.iconPosition === 'right' ? '0 0.5rem 0.5rem 0' : '0.5rem 0 0 0.5rem')};
     display: flex;
     justify-content: center;
     align-items:center;

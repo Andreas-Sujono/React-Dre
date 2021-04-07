@@ -4,7 +4,7 @@ import { ColumnWrapper } from './Style';
 
 export interface IProps {
   span: number | Breakpoints;
-  children: React.ReactChildren,
+  children: React.ReactElement,
   flex?: string;
   style?: Record<string, any>,
 }
