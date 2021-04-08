@@ -1,0 +1,28 @@
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
+import ScrollAnimation from '../index.ts';
+
+<Meta title="Components/ScrollAnimation" component={ScrollAnimation}/>
+
+# ScrollAnimation Documentation
+<Preview>
+  <Story name="ScrollAnimation">
+    <div style={{
+      height: '200px',
+      overflow: 'auto',
+      width: '100%',
+    }}>
+      <div style={{
+        height: '2200px',
+        background: '#EAEAEA'
+      }}>
+        <ScrollAnimation animateIn="fadeIn">
+          fadeIn Text
+        </ScrollAnimation>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={ScrollAnimation} />

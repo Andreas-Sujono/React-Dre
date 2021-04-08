@@ -18,6 +18,26 @@ const transpileModules = (config) => {
       include: path.resolve(__dirname, '../'),
     });
 
+
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader?modules=true'],
+      include: path.resolve(__dirname, '../'),
+    });
+
+    config.module.rules.push({
+      test: /\.mp4$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            outputPath: "video"
+          }
+        }
+      ]
+    });
+
     config.resolve.modules = [
       path.resolve(__dirname, "..", "src"),
       "node_modules",
