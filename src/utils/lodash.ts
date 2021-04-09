@@ -1,6 +1,6 @@
 import {
   get, cloneDeep, camelCase, snakeCase, capitalize, startCase, upperFirst
-} from 'lodash';
+} from 'lodash-es';
 
 export {
   get,

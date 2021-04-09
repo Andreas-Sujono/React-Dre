@@ -1,6 +1,6 @@
 import path from 'path';
 import json from 'rollup-plugin-json';
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from '@rollup/plugin-commonjs';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import postcssUrl from 'postcss-url';
@@ -38,11 +38,12 @@ const plugins = [
     rollupCommonJSResolveHack: true,
     clean: true,
   }),
+  commonjs(),
   babel({
     exclude: 'node_modules/**',
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    babelHelpers: 'bundled'
   }),
-  commonjs(),
   terser()
 ];
 

@@ -1,4 +1,8 @@
-import Row from './Row';
-import Column from './Column';
+// use better version from AntDesign, see docs here: https://ant.design/components/grid/
+import {
+  Row, Col
+} from 'antd';
 
-export { Row, Column };
+export {
+  Row, Col
+};
