@@ -13,7 +13,7 @@ const ButtonWrapper = styled.div < IButtonWrapperProps > `
 
 const StyledButton = styled(Button)`
 padding: '0.5em';
-borderRadius: '50%';
+border-radius: '50%';
 
 &:hover{
     background: grey;
